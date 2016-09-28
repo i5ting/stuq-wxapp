@@ -12,9 +12,6 @@
 ## IDE
 
 
-官方在破解之后，立马更新了，所以很多东西都做了保护。虽说没有appid也可以测试，但毕竟不是完整版mo-呲牙
-
-
 helper for https://github.com/gavinkwoe/weapp-ide-crack
 
 第一批内测只有200个，所以大部分人都没办法弄到，但又想提前体验，怎么办呢？
@@ -152,7 +149,25 @@ $ DEBUG=weide weide
 ```
 
 
-## 实例
+## 实例：用cnode社区api做微信小应用
+
+
+https://github.com/coolfishstudio/wechat-webapp-cnode
+
+### 导入项目
+
+添加项目
+
+![1](images/import/1.png)
+
+
+选择源码所在目录
+
+![2](images/import/2.png)
+
+完整信息
+
+![3](images/import/3.png)
 
 
 
