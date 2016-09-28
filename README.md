@@ -724,7 +724,7 @@ Flexbox Layout, 官方名为CSS Flexible Box Layout Module, 意为"弹性布局"
 ![Flex Container Item](images/flex-container-item.png)
 
 
-## 高级玩法
+# 高级玩法
 
 https://github.com/MeCKodo/wxapp-cli
 
@@ -803,42 +803,21 @@ PS: 当然如果你不想写ES6也是完全可以的 在后面统一介绍命令
 
 # 推荐一些学习资料
 
-参见 https://github.com/justjavac/awesome-wechat-weapp 正版？有梗
+参见 
+
+- https://github.com/justjavac/awesome-wechat-weapp
+- http://wxopen.notedown.cn/
 
 
-前端4阶段
-
-- 原始
-- jquery
-- angular，bb
-- react。vue 
-
-# 关于StuQ
+# 关于现状
 
 ![](images/stuq.png)
 
-软件公司招聘需要巨大，但入门难，技术发展过快（指数），而人的曲线成长较慢，现在的慕客形式又过于老旧，呆板，少互动，所以社群时代的在线教育，一定是专业的、互动的、深入浅出、共同成长，这些正是StuQ最擅长的方面，我个人特别看好StuQ这个品牌，真心推荐，如果不是股份绑定，我一定会加入StuQ
-
-
-推荐给雷蒙德的可选课程
-
-- jquery  + bootstrap + 后台开发（难度较低，适合那些偏java的人）
-- angularjs2 + ionic 2 （难度较大，ng2刚发布，需要学ts，另外里面概念非常多）
-- vue 2、weex（刚发布不久，无论推广还是趋势都不错）
-- react和rn（依然很拉风）
-- 高效前端工具集webpack，gulp，npm，postcss，less，coffee （比较零散，但可以提高视野，在工作中可能会用上）
-- h5 + cordova + weui + vux（移动端一些比较好的集合）
-- nw.js + react 或 electron + react 构建PC桌面应用（钉钉、微信工具ide等把pc端桌面使用web技术构建推向高潮）
-- 七周七个前端开源项目（精选，和高效前端工具集类似）
-- koa2.0 （node7月底发布，支持async/await开始大推）
-
-
-
+- 技术发展太快，是指数型发展
+- 人的学习速度是平滑的上升的曲线
 
 # 作业
 
 这个分类tab实现的太low了，很明显没有花费时间，如何通过class属性来实现一个更加好看的，带有选中状态的分类tab么？
 
 大家可以自己试试
-
-
