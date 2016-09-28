@@ -169,6 +169,93 @@ https://github.com/coolfishstudio/wechat-webapp-cnode
 
 ![3](images/import/3.png)
 
+### 首页
+
+效果
+
+#### 布局
+
+example/pages/topics/topics.wxml
+
+```
+<!--posts.wxml-->
+<view class="topics-main">
+  <view class="top-bar">
+    <view class="top-bar-item" id="all" catchtap="onTapTag">全部</view>
+    <view class="top-bar-item" id="good" catchtap="onTapTag">精华</view>
+    <view class="top-bar-item" id="share" catchtap="onTapTag">分享</view>
+    <view class="top-bar-item" id="ask" catchtap="onTapTag">问答</view>
+    <view class="top-bar-item" id="job" catchtap="onTapTag">招聘</view>
+  </view>
+  <scroll-view class="posts-list" style="height:100%" scroll-y="true" bindscrolltolower="lower">
+    <block wx:for="{{postsList}}">
+      <view class="posts-item" index="{{index}}" id="{{item.id}}" catchtap="redictDetail">
+        <view class="author">
+          <image class="author-avatar" src="{{item.author.avatar_url}}"></image>
+          <view class="author-name">{{item.author.loginname}}</view>
+          <view class="posts-tag hot" wx:if="{{item.top === true}}">置顶</view>
+          <view class="posts-tag" wx:if="{{item.good === true}}">精华</view>
+          <view class="posts-last-reply">{{item.last_reply_at}}</view>
+        </view>
+        <view class="posts-title">{{item.title}}</view>
+        <view class="bar-info">
+          <view class="bar-info-item">
+            <image class="bar-info-item-icon" src="/images/icon/reply.png"></image>
+            <view class="bar-info-item-number">{{item.reply_count}}</view>
+          </view>
+          <view class="bar-info-item">
+            <image class="bar-info-item-icon" src="/images/icon/visit.png"></image>
+            <view class="bar-info-item-number">{{item.visit_count}}</view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+
+  <loading hidden="{{hidden}}">
+    加载中...
+  </loading>
+</view>
+```
+
+- top-bar   分类是普通的view
+- posts-list  帖子列表，是scroll-view
+- loading  内置的组件，默认隐藏
+
+![Layout](images/layout.png)
+
+
+- 帖子列表
+- tab
+- 上拉加载下一页
+- loading
+
+
+
+
+### flex 弹性布局
+
+Flexbox Layout, 官方名为CSS Flexible Box Layout Module, 意为"弹性布局", 是CSS3中引入的一种更加灵活高效的布局/对齐/排序方式(还有一种更适合大型布局的网格布局CSS Grid Layout Module). flex是flexible的缩写.
+
+任何一个容器都可以指定为flex布局。
+
+```
+.box {
+  display: flex;
+}
+```
+
+行内元素也可以使用flex布局。
+
+```
+.box {
+  display: inline-flex;
+}
+```
+
+![Flex Container Item](images/flex-container-item.png)
+
+
 
 
 1. 
