@@ -235,8 +235,304 @@ http://wxopen.notedown.cn/component/
 ![Component](images/component.png)
 
 ### 帖子列表
+
+```
+  <scroll-view class="posts-list" style="height:100%" scroll-y="true" bindscrolltolower="lower">
+    <block wx:for="{{postsList}}">
+      <view class="posts-item" index="{{index}}" id="{{item.id}}" catchtap="redictDetail">
+        <view class="author">
+          <image class="author-avatar" src="{{item.author.avatar_url}}"></image>
+          <view class="author-name">{{item.author.loginname}}</view>
+          <view class="posts-tag hot" wx:if="{{item.top === true}}">置顶</view>
+          <view class="posts-tag" wx:if="{{item.good === true}}">精华</view>
+          <view class="posts-last-reply">{{item.last_reply_at}}</view>
+        </view>
+        <view class="posts-title">{{item.title}}</view>
+        <view class="bar-info">
+          <view class="bar-info-item">
+            <image class="bar-info-item-icon" src="/images/icon/reply.png"></image>
+            <view class="bar-info-item-number">{{item.reply_count}}</view>
+          </view>
+          <view class="bar-info-item">
+            <image class="bar-info-item-icon" src="/images/icon/visit.png"></image>
+            <view class="bar-info-item-number">{{item.visit_count}}</view>
+          </view>
+        </view>
+      </view>
+    </block>
+  </scroll-view>
+```
+
+布局是scroll-view，然后嵌入了
+
+```
+<block wx:for="{{postsList}}">
+  
+</block>
+```
+
+像不像ejs里的
+
+```
+<ul>
+<% for(var i=0; i<supplies.length; i++) {%>
+   <li><%= supplies[i] %></li>
+<% } %>
+</ul>
+```
+
+然后我们看看里面的单条展示
+
+![Cell](images/cell.png)
+
+```
+      <view class="posts-item" index="{{index}}" id="{{item.id}}" catchtap="redictDetail">
+        <view class="author">
+          <image class="author-avatar" src="{{item.author.avatar_url}}"></image>
+          <view class="author-name">{{item.author.loginname}}</view>
+          <view class="posts-tag hot" wx:if="{{item.top === true}}">置顶</view>
+          <view class="posts-tag" wx:if="{{item.good === true}}">精华</view>
+          <view class="posts-last-reply">{{item.last_reply_at}}</view>
+        </view>
+        <view class="posts-title">{{item.title}}</view>
+        <view class="bar-info">
+          <view class="bar-info-item">
+            <image class="bar-info-item-icon" src="/images/icon/reply.png"></image>
+            <view class="bar-info-item-number">{{item.reply_count}}</view>
+          </view>
+          <view class="bar-info-item">
+            <image class="bar-info-item-icon" src="/images/icon/visit.png"></image>
+            <view class="bar-info-item-number">{{item.visit_count}}</view>
+          </view>
+        </view>
+      </view>
+```
+
+
+可以看出是一个cell里分了3行
+
+- 第1行 author   作者、时间
+- 第2行 posts-title 标题
+- 第3行 bar-info 评论，查看次数
+
+然后单行，以author为例子
+
+```
+        <view class="author">
+          <image class="author-avatar" src="{{item.author.avatar_url}}"></image>
+          <view class="author-name">{{item.author.loginname}}</view>
+          <view class="posts-tag hot" wx:if="{{item.top === true}}">置顶</view>
+          <view class="posts-tag" wx:if="{{item.good === true}}">精华</view>
+          <view class="posts-last-reply">{{item.last_reply_at}}</view>
+        </view>
+```
+
+各位看到这里有啥感觉呢？
+
+### 如何获取数据？
+
+上面模板里的`for` + 描述用的block，有一个postsList，如果有它就可以显示了。那么如何它在哪里呢？
+
+其实在example/pages/topics/topics.js里的
+
+```
+Page({
+  data: {
+    title: '话题列表',
+    postsList: [],
+    hidden: false,
+    page: 1,
+    tab: 'all'
+  },
+  ...
+})
+```
+
+注意data里的postsList。也就是说data里的面内容会和模板一起编译，有木有明白点什么？
+
+### 和模板引擎像么？
+
+模板引擎原理
+
+> 编译（模板 + 数据）= html
+
+你只要setData,它就会自动渲染，是不是有点像mvvm？$scope?
+
+```
+        self.setData({
+          postsList: self.data.postsList.concat(res.data.data.map(function (item) {
+            item.last_reply_at = util.getDateDiff(new Date(item.last_reply_at));
+            return item;
+          }))
+        });
+```
+
+只不过所有的数据都放到data作为上下文，这其实是简化了的方案。
+
+### http请求
+
+api是获取主页列表
+
+![Api](images/api.png)
+
+具体的调用wx.request向服务器发送
+
+```
+    wx.request({
+      url: Api.getTopics(data),
+      success: function (res) {
+        self.setData({
+          postsList: self.data.postsList.concat(res.data.data.map(function (item) {
+            item.last_reply_at = util.getDateDiff(new Date(item.last_reply_at));
+            return item;
+          }))
+        });
+        setTimeout(function () {
+          self.setData({
+            hidden: true
+          });
+        }, 300);
+      }
+    });
+```
+
+这里很简单
+
+- get请求
+- url = Api.getTopics(data)
+- success 是当请求成功的时候的回调处理
+
+和ajax基本一样，对比$.ajax，想想
+
+![Request](images/request.png)
+
+更多示例
+
+```
+wx.request({
+  url: 'test.php',
+  data: {
+     x: '' ,
+     y: ''
+  },
+  header:{
+      "Content-Type":"application/json"
+  },
+  success: function(res) {
+     var data = res.data;
+  }
+});
+```
+
+剩下的我们还需要啥呢？
+
+> 后台接口api开发就够了
+
+### 你所说的mvvm呢？
+
+### Page的生命周期
+
 ### tab
+
+
 ### 上拉加载下一页
+
+所有的组件能和object是一样，就2各种：属性（基本类型，Boolean，Number，String）和行为（EventHandle）
+
+```
+ <scroll-view class="posts-list" style="height:100%" scroll-y="true" bindscrolltolower="lower">
+```
+
+这里的class，style，scroll-y，bindscrolltolower都是属性，唯一不一样的是bindscrolltolower，它实际上是行为
+
+```
+bindscrolltolower	EventHandle		滚动到底部/右边，会触发scrolltolower事件
+```
+
+即我们在移动端常说的上拉加载更多。
+
+这和我们写react、vue实际上是非常类似的。
+
+https://github.com/airyland/vux/blob/master/src/components/panel/index.vue
+
+```
+<template>
+  <div class="weui_panel weui_panel_access">
+    <div class="weui_panel_hd" v-if="header" @click="onClickHeader" v-html="header"></div>
+    <div class="weui_panel_bd">
+      <!--type==='1'-->
+      <a :href="getUrl(item.url)" v-for="item in list" @click.prevent="onItemClick(item)" class="weui_media_box weui_media_appmsg" v-if="type === '1'">
+        <div class="weui_media_hd" v-if="item.src">
+          <img class="weui_media_appmsg_thumb" :src="item.src" alt="">
+        </div>
+        <div class="weui_media_bd">
+          <h4 class="weui_media_title">{{item.title}}</h4>
+          <p class="weui_media_desc">{{item.desc}}</p>
+        </div>
+      </a>
+      <!--type==='2'-->
+      <div class="weui_media_box weui_media_text" v-for="item in list" @click.prevent="onItemClick(item)" v-if="type === '2'">
+          <h4 class="weui_media_title">{{item.title}}</h4>
+          <p class="weui_media_desc">{{item.desc}}</p>
+      </div>
+      <!--type==='3'-->
+      <div class="weui_media_box weui_media_small_appmsg">
+          <div class="weui_cells weui_cells_access">
+            <a class="weui_cell" :href="getUrl(item.url)" v-for="item in list" @click.prevent="onItemClick(item)" v-if="type === '3'">
+              <div class="weui_cell_hd">
+                <img :src="item.src" alt="" style="width:20px;margin-right:5px;display:block">
+              </div>
+              <div class="weui_cell_bd weui_cell_primary">
+                <p>{{item.title}}</p>
+              </div>
+              <span class="weui_cell_ft"></span>
+            </a>
+          </div>
+      </div>
+    </div>
+    <a class="weui_panel_ft" :href="getUrl(footer.url)" v-if="footer && type !== '3'" @click.prevent="onClickFooter" v-html="footer.title"></a>
+  </div>
+</template>
+
+<script>
+import { go, getUrl } from '../../libs/router'
+export default {
+  props: {
+    header: String,
+    footer: Object,
+    list: Array,
+    type: {
+      type: String,
+      default: '1'
+    }
+  },
+  methods: {
+    getUrl (url) {
+      return getUrl(url, this.$router)
+    },
+    onClickFooter () {
+      this.$emit('on-click-footer')
+      go(this.footer.url, this.$router)
+    },
+    onClickHeader () {
+      this.$emit('on-click-header')
+    },
+    onItemClick (item) {
+      this.$emit('on-click-item', item)
+      go(item.url, this.$router)
+    }
+  }
+}
+</script>
+
+<style lang="less">
+@import '../../styles/weui/widget/weui_panel/weui_panel';
+@import '../../styles/weui/widget/weui_media_box/weui_media_box';
+</style>
+
+```
+
+
 ### loading
 
 
@@ -263,6 +559,35 @@ Flexbox Layout, 官方名为CSS Flexible Box Layout Module, 意为"弹性布局"
 ```
 
 ![Flex Container Item](images/flex-container-item.png)
+
+
+## 高级玩法
+
+https://github.com/MeCKodo/wxapp-cli
+
+优势
+
+1.可以在任意IDE中开发
+
+2.可使用ES6或ES5
+
+3.支持sass和less
+
+4.可以同时编写.html|.wxml，.wxss|.scss|.less 文件，最后都会转换为.wxml和.wxss
+
+5.编写完任何文件（包括.json）只需要去微信开发者工具中点击重启即可预览
+
+6.NODE_ENV 环境切换 (dev|production)
+
+7.支持eslint (在gulpfile文件打开36行注释即可,下个版本会集成到cli配置选项中)
+
+劣势
+
+1.由于微信封闭的环境内，所以没有sourcemap，但这不太影响调试（即使是经过编译后的代码，本人测试了出bug的代码，还是可以从控制台跳到源码的地方）
+
+2.由于微信封闭的环境内，无法实现reload或者hot reload
+
+PS: 当然如果你不想写ES6也是完全可以的 在后面统一介绍命令
 
 
 
