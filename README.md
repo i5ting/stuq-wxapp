@@ -23,7 +23,7 @@
 
 > 微信小程序是限于微信提供的MINA框架提供的app开发便捷展示解决方案
 
-# IDE
+# 从IDE破解开始
 
 
 helper for https://github.com/gavinkwoe/weapp-ide-crack
@@ -94,16 +94,6 @@ $ weide
 5. 打开项目
 6. 开始开发
 7. Good luck
-
-## 学习资料
-
-* NoteDown版本
-	* 框架入门
-		* http://wxopen.notedown.cn/framework/MINA.html
-	* 组件入门
-		* http://wxopen.notedown.cn/component/
-	* API入门
-		* http://wxopen.notedown.cn/api/
 
 ## Demo运行
 
@@ -746,28 +736,67 @@ page里的redictDetail方法
 <navigator url="redirect?title=redirect" redirect hover-class="other-navigator-hover">在当前页打开</navigator>
 ```
 
-### flex 弹性布局
+### utils定义
 
-Flexbox Layout, 官方名为CSS Flexible Box Layout Module, 意为"弹性布局", 是CSS3中引入的一种更加灵活高效的布局/对齐/排序方式(还有一种更适合大型布局的网格布局CSS Grid Layout Module). flex是flexible的缩写.
-
-任何一个容器都可以指定为flex布局。
+page里
 
 ```
-.box {
-  display: flex;
+// posts.js
+var Api = require('../../utils/api.js');
+var util = require('../../utils/util.js');
+```
+
+api.js具体内容
+
+```
+'use strict';
+var HOST_URI = 'https://cnodejs.org/api/v1';
+
+var GET_TOPICS = '/topics';
+var GET_TOPIC_BY_ID = '/topic/';
+
+function obj2uri (obj) {
+    return Object.keys(obj).map(function (k) {
+        return encodeURIComponent(k) + '=' + encodeURIComponent(obj[k]);
+    }).join('&');
 }
+
+module.exports = {
+    // 获取列表数据
+    getTopics: function (obj) {
+        return HOST_URI + GET_TOPICS + '?' + obj2uri(obj);
+    },
+    // 获取内容页数据
+    getTopicByID: function (id, obj) {
+        return HOST_URI + GET_TOPIC_BY_ID + id + '?' + obj2uri(obj);
+    }
+};
 ```
 
-行内元素也可以使用flex布局。
+感觉跟啥像？
 
-```
-.box {
-  display: inline-flex;
-}
-```
+### Promise?
 
-![Flex Container Item](images/flex-container-item.png)
+![Async](images/async.png)
 
+- [微信小程序使用Promise](https://cnodejs.org/topic/57eb4e4bea2fa420446d4371)
+
+### wxss
+
+http://wxopen.notedown.cn/framework/view/wxss.html
+
+## 缓存
+
+这里没有使用，如果使用登录的时候就需要了，比如token
+
+文档 http://wxopen.notedown.cn/api/data.html
+
+k-v的，还是比较有限的
+
+## websocket
+
+- pub/sub
+- im
 
 # 高级玩法
 
@@ -825,7 +854,7 @@ PS: 当然如果你不想写ES6也是完全可以的 在后面统一介绍命令
 
 上面讲过了
 
-## 未来是h5的
+## 如何看待h5？
 
 我曾讲过，未来是h5的，原因有2
 
@@ -859,14 +888,13 @@ h5就像前端开发里躲不开Node.js一样，无论你是做什么的，你�
 
 是不是挺吓人的一件事儿？估计其他大厂又要躲在厕所哭泣：不要让我的app下架。。。，微信说：你司核心价值观有问题，改了之后再说吧
 
-
 ## 如何快速学习？
 
 小程序只是增加了一种选择，以前是h5，pc，app，现在是小程序，h5，pc，app，它们无疑都是展示层的实现，所以对后台是没有影响的。它们的共性是会js能让你开发的更好，而今Node.js凭借其性能和强大npm生态，以及在大前端的火爆，使得Node.js无处不在。
 
-在这种情况下使用Node.js开发微信相关功能是非常好的选择，成本最低，可以获得相对不错的性能，而且易于扩展。
+> Node全栈是一个比较好的方向，如果不想全栈，你至少要考虑前端
 
-> Node全栈是一个比较好的方向
+现代web开发里的大前端
 
 ![0](images/node/0.png)
 
@@ -880,13 +908,17 @@ h5就像前端开发里躲不开Node.js一样，无论你是做什么的，你�
 
 高可用架构专用《全栈工程师之路-Node.js》 http://i5ting.github.io/nodejs-fullstack/
 
-
 # 推荐一些学习资料
 
 参见 
 
 - https://github.com/justjavac/awesome-wechat-weapp
 - http://wxopen.notedown.cn/
+
+# 关于小程序未来
+
+- 开发组件定义
+- html转wxml，目前已经有人做了
 
 
 # 关于现状
@@ -895,6 +927,7 @@ h5就像前端开发里躲不开Node.js一样，无论你是做什么的，你�
 
 - 技术发展太快，是指数型发展
 - 人的学习速度是平滑的上升的曲线
+- 持续学习，利用好时间，每日精进
 
 # 作业
 
