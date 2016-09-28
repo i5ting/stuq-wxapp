@@ -3,13 +3,13 @@
 
 主题：微信小程序开发适合你吗？
 
-## 微信小程序是什么？
+# 微信小程序是什么？
 
 （从技术角度看，微信提供的框架、接口、开发方法）
 
 微信小程序是限于微信提供的MINA框架提供的app开发便捷展示解决方案
 
-## IDE
+# IDE
 
 
 helper for https://github.com/gavinkwoe/weapp-ide-crack
@@ -18,25 +18,25 @@ helper for https://github.com/gavinkwoe/weapp-ide-crack
 
 先从 https://github.com/gavinkwoe/weapp-ide-crack 开始说起吧。
 
-### gavinkwoe是谁？
+## gavinkwoe是谁？
 
 gavinkwoe是郭虹宇，老郭以前在腾讯，后来出来在呼家楼那边创业，很棒的公司，他本人技术也是相当到位的，最早是beeframework，代码写的还是相当棒，这货对tcp和c也相当厉害，据说拿过专利。后来bee半火不火的，就搞了类似于css描述生成iOS页面的东西，之后react-native出来之后，貌似就转rn了。而且还带出了QFish这样的优秀小弟，很棒的。
 
 总之，老郭有非常强大的iOS开发能力，所以这次破解微信开发工具也是有一定必然性的。
 
-### 小助手：weide
+## 小助手：weide
 
 https://github.com/i5ting/weide
 
 它其实就为了简化安装破解而写的简单小程序。利用node模块和npm强大的机制，简化破解并提供实用辅助功能。特别简单，但还算实用。
 
-### 安装小助手
+## 安装小助手
 
 ```
 $ [sudo] npm i -g weide
 ```
 
-### 小助手用法
+## 小助手用法
 
 - 下载微信web开发者工具0.9(百度: https://pan.baidu.com/s/1pLxqFzH （密码: bwt9）) 位置 /Applications/微信web开发者工具.app/
 - 下载微信web开发者工具0.7(百度: https://pan.baidu.com/s/1pLTKIqJ （密码: iswg）) 位置 /Applications/微信web开发者工具0.7.app/
@@ -64,7 +64,7 @@ $ set WECHAT_IDE=/Applications/微信web开发者工具0.9.app/
 $ weide
 ```
 
-### 项目创建
+## 项目创建
 
 用法部分来自老郭 http://www.geek-zoo.com
 
@@ -81,7 +81,7 @@ $ weide
 6. 开始开发
 7. Good luck
 
-### 学习资料
+## 学习资料
 
 * NoteDown版本
 	* 框架入门
@@ -91,7 +91,7 @@ $ weide
 	* API入门
 		* http://wxopen.notedown.cn/api/
 
-### Demo运行
+## Demo运行
 
 * 创建项目
 * 打开项目所在目录
@@ -99,7 +99,7 @@ $ weide
 * 打开项目
 * Good luck
 
-### 常见问题
+## 常见问题
 
 1. 找不到所要替换的文件
   * 问题原因：开发工具版本不正确，老版本不支持
@@ -118,13 +118,13 @@ $ weide
   * 问题原因：TypeError: Cannot read property 'MaxRequestConcurrent' of undefined
   * 解决方案：替换 /Resources/app.nw/app/dist/weapp/appservice/asdebug.js  
 
-### 工具截图
+## 工具截图
 
 ![IDE](https://cloud.githubusercontent.com/assets/876707/18745196/f4f0488e-80f3-11e6-844b-f45d7e52a23c.png)
 
 ![IDE](https://cloud.githubusercontent.com/assets/876707/18745200/f7a74870-80f3-11e6-83cf-df00f7f87f56.png)
 
-### 禁用自动升级
+## 禁用自动升级
 
 破解之后，微信官方立马2个通宵，修复了大量问题，包括store命名错误，自动升级。可以说之前的版本是没有被特意“保护”的，所以可以挖出更多细节，nw.js的升级机制很简单，非常容易破解
 
@@ -134,7 +134,7 @@ $ wecrack
 
 会修改Contents/Resources/app.nw/package.json的版本号，避免自动升级
 
-### 一键美化压缩js代码
+## 一键美化压缩js代码
 
 会读取默认安装位置，或环境变量里的WECHAT_IDE下的所有js都会美化
 
@@ -142,19 +142,19 @@ $ wecrack
 $ allb
 ```
 
-### 调试
+## 调试
 
 ```
 $ DEBUG=weide weide
 ```
 
 
-## 实例：用cnode社区api做微信小应用
+# 实例：用cnode社区api做微信小应用
 
 
 https://github.com/coolfishstudio/wechat-webapp-cnode
 
-### 导入项目
+## 导入项目
 
 添加项目
 
@@ -169,11 +169,13 @@ https://github.com/coolfishstudio/wechat-webapp-cnode
 
 ![3](images/import/3.png)
 
-### 首页
+## 首页
 
 效果
 
-#### 布局
+### 布局
+
+![Layout](images/layout.png)
 
 example/pages/topics/topics.wxml
 
@@ -218,17 +220,24 @@ example/pages/topics/topics.wxml
 </view>
 ```
 
+三大部分
+
 - top-bar   分类是普通的view
 - posts-list  帖子列表，是scroll-view
 - loading  内置的组件，默认隐藏
 
-![Layout](images/layout.png)
+> 简单点说，就是你们误会了的组件
 
+是不是跟vue、react很像？
 
-- 帖子列表
-- tab
-- 上拉加载下一页
-- loading
+http://wxopen.notedown.cn/component/
+
+![Component](images/component.png)
+
+### 帖子列表
+### tab
+### 上拉加载下一页
+### loading
 
 
 
