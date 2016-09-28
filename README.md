@@ -635,10 +635,70 @@ export default {
 
 ```
 
-
 ### loading
 
+其实非常简单的,定义模板
 
+```
+  <loading hidden="{{hidden}}">
+    加载中...
+  </loading>
+```
+
+那这个`hidden="{{hidden}}"`呢？模板都是data里的，so
+
+```
+Page({
+  data: {
+    title: '话题列表',
+    postsList: [],
+    hidden: false,
+    page: 1,
+    tab: 'all'
+  },
+```
+
+默认是false，因为一进来就要loading。。。
+
+进来的时候通过lifecyle的onload
+
+```
+  onLoad: function () {
+    console.log(1)
+    this.fetchData();
+  },
+```
+
+然后隐藏loading的操作就在http请求数据之后了。
+
+```
+    wx.request({
+      url: Api.getTopics(data),
+      success: function (res) {
+        self.setData({
+          postsList: self.data.postsList.concat(res.data.data.map(function (item) {
+            item.last_reply_at = util.getDateDiff(new Date(item.last_reply_at));
+            return item;
+          }))
+        });
+        setTimeout(function () {
+          self.setData({
+            hidden: true
+          });
+        }, 300);
+      }
+    });
+```
+
+其中的
+
+```
+          self.setData({
+            hidden: true
+          });
+```
+
+还得上文中说的data是全局上下午吗？
 
 
 ### flex 弹性布局
@@ -735,7 +795,7 @@ StuQ的《Nodejs微信开发》课程深入浅出，通过Node.js和express框�
 
 8. 推荐一些学习资料
 
-参见 https://github.com/justjavac/awesome-wechat-weapp
+参见 https://github.com/justjavac/awesome-wechat-weapp 正版？有梗
 
 
 前端4阶段
@@ -765,3 +825,12 @@ StuQ的《Nodejs微信开发》课程深入浅出，通过Node.js和express框�
 ![](images/stuq.png)
 
 软件公司招聘需要巨大，但入门难，技术发展过快（指数），而人的曲线成长较慢，现在的慕客形式又过于老旧，呆板，少互动，所以社群时代的在线教育，一定是专业的、互动的、深入浅出、共同成长，这些正是StuQ最擅长的方面，我个人特别看好StuQ这个品牌，真心推荐，如果不是股份绑定，我一定会加入StuQ
+
+
+## 作业
+
+这个分类tab实现的太low了，很明显没有花费时间，如何通过class属性来实现一个更加好看的，带有选中状态的分类tab么？
+
+大家可以自己试试
+
+
