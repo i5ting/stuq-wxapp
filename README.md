@@ -428,12 +428,115 @@ wx.request({
 
 > 后台接口api开发就够了
 
-### 你所说的mvvm呢？
-
 ### Page的生命周期
+
+http://wxopen.notedown.cn/framework/app-service/page.html
+
+![Lifecycle](images/lifecycle.png)
+
+群里有iOS工程师
+
+```
+
+@interface ViewController ()
+
+@end
+
+@implementation ViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+@end
+
+```
+
+页面刚进来的时候掉的viewDidLoad，而html里的onload，是不是非常类似？会有人想到dp里的模板模式么？
+
+```
+//index.js
+Page({
+  data: {
+    text: "This is page data."
+  },
+  onLoad: function(options) {
+    // Do some initialize when page load.
+  },
+  onReady: function() {
+    // Do something when page ready.
+  },
+  onShow: function() {
+    // Do something when page show.
+  },
+  onHide: function() {
+    // Do something when page hide.
+  },
+  onUnload: function() {
+    // Do something when page close.
+  },
+  // Event handler.
+  viewTap: function() {
+    this.setData({
+      text: 'Set some data for updating view.'
+    })
+  }
+})
+```
+
 
 ### tab
 
+模板
+
+```
+  <view class="top-bar">
+    <view class="top-bar-item" id="all" catchtap="onTapTag">全部</view>
+    <view class="top-bar-item" id="good" catchtap="onTapTag">精华</view>
+    <view class="top-bar-item" id="share" catchtap="onTapTag">分享</view>
+    <view class="top-bar-item" id="ask" catchtap="onTapTag">问答</view>
+    <view class="top-bar-item" id="job" catchtap="onTapTag">招聘</view>
+  </view>
+```
+
+事件触发
+
+```
+catchtap="onTapTag"
+```
+
+这个也是Page上下文里的方法
+
+```
+  onTapTag: function (e) {
+    var self = this;
+    var tab = e.currentTarget.id;
+    self.setData({
+      tab: tab
+    });
+    if (tab !== 'all') {
+      this.fetchData({tab: tab});
+    } else {
+      this.fetchData();
+    }
+  },
+```
+
+那么如何知道e里都有啥呢？
+
+简单的打印log即可
+
+![E](images/e.png)
+
+简单的调试
+
+![Debug](images/debug.png)
 
 ### 上拉加载下一页
 
