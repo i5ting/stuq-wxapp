@@ -908,17 +908,19 @@ h5就像前端开发里躲不开Node.js一样，无论你是做什么的，你�
 
 高可用架构专用《全栈工程师之路-Node.js》 http://i5ting.github.io/nodejs-fullstack/
 
+
+# 关于小程序未来
+
+- 开发组件定义
+- html转wxml，目前已经有人做了
+- 扫一扫
+
 # 推荐一些学习资料
 
 参见 
 
 - https://github.com/justjavac/awesome-wechat-weapp
 - http://wxopen.notedown.cn/
-
-# 关于小程序未来
-
-- 开发组件定义
-- html转wxml，目前已经有人做了
 
 
 # 关于现状
