@@ -5,6 +5,26 @@
 
 > 微信小程序开发适合你吗？
 
+
+如果想邀请分享，请邮寄给我shiren1118@126.com,如果时间ok，我会尽量分享
+
+## 讲师介绍
+
+英文版本
+
+
+Afred Sang（aka i5ting）
+
+Alfred Sang (aka i5ting), CTO of Aircos, top trainer of StuQ, author of the open source project Moa.js, and also an evangelist of Node.js. The uniqueness of his experience makes him a full stack practitioner. He served at Sina, NQ Mobile by playing several major roles, such as Chief Architect, R&D Director. Currently, he is focusing on technical architecture and organization/talent development. A book from him, named as "Smashing Node.js 6: Koa Everywhere", is also on the way.
+
+
+中文版
+
+
+桑世龙（网名i5ting），空弦科技 CTO，StuQ 明星讲师，开源项目 Moajs 作者，Node.js 技术布道者
+曾就职在新浪、网秦，曾做过前端、后端、数据分析、移动端负责人、做过首席架构师、技术总监，全栈技术实践者，目前主要关注技术架构和团队梯队建设方向，正在写一个本新书《更了不起的 Node 4：将下一代 Web 框架 Koa 进行到底》
+
+
 # 微信小程序是什么？
 
 先回顾一下微信应用号发布事件
