@@ -1,0 +1,1058 @@
+
+	    <html>
+	      <head>
+				  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	        <title>README</title>
+					
+					<link href="toc/style/github-bf51422f4bb36427d391e4b75a1daa083c2d840e.css" media="all" rel="stylesheet" type="text/css"/>
+					<link href="toc/style/github2-d731afd4f624c99a4b19ad69f3083cd6d02b81d5.css" media="all" rel="stylesheet" type="text/css"/>
+					<link href="toc/css/zTreeStyle/zTreeStyle.css" media="all" rel="stylesheet" type="text/css"/>
+			
+				  <style>
+					pre {
+					    counter-reset: line-numbering;
+					    border: solid 1px #d9d9d9;
+					    border-radius: 0;
+					    background: #fff;
+					    padding: 0;
+					    line-height: 23px;
+					    margin-bottom: 30px;
+					    white-space: pre;
+					    overflow-x: auto;
+					    word-break: inherit;
+					    word-wrap: inherit;
+					}
+
+					pre a::before {
+					  content: counter(line-numbering);
+					  counter-increment: line-numbering;
+					  padding-right: 1em; /* space after numbers */
+					  width: 25px;
+					  text-align: right;
+					  opacity: 0.7;
+					  display: inline-block;
+					  color: #aaa;
+					  background: #eee;
+					  margin-right: 16px;
+					  padding: 2px 10px;
+					  font-size: 13px;
+					  -webkit-touch-callout: none;
+					  -webkit-user-select: none;
+					  -khtml-user-select: none;
+					  -moz-user-select: none;
+					  -ms-user-select: none;
+					  user-select: none;
+					}
+
+					pre a:first-of-type::before {
+					  padding-top: 10px;
+					}
+
+					pre a:last-of-type::before {
+					  padding-bottom: 10px;
+					}
+
+					pre a:only-of-type::before {
+					  padding: 10px;
+					}
+			
+					.highlight { background-color: #ffffcc } /* RIGHT */
+					</style>
+	      </head>
+	      <body>
+				  <div>
+							<div style='width:25%;'>
+									<ul id="tree" class="ztree" style='width:100%'>
+		
+									</ul>
+							</div>
+			        <div id='readme' style='width:70%;margin-left:20%;'>
+			          	<article class='markdown-body'>
+			            	<style>.highlight .hll { background-color: #ffffcc }
+.highlight  { background: #f0f0f0; }
+.highlight .c { color: #60a0b0; font-style: italic } /* Comment */
+.highlight .err { border: 1px solid #FF0000 } /* Error */
+.highlight .k { color: #007020; font-weight: bold } /* Keyword */
+.highlight .o { color: #666666 } /* Operator */
+.highlight .cm { color: #60a0b0; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #007020 } /* Comment.Preproc */
+.highlight .c1 { color: #60a0b0; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #60a0b0; background-color: #fff0f0 } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #00A000 } /* Generic.Inserted */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #c65d09; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #0044DD } /* Generic.Traceback */
+.highlight .kc { color: #007020; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #007020; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #007020; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #007020 } /* Keyword.Pseudo */
+.highlight .kr { color: #007020; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #902000 } /* Keyword.Type */
+.highlight .m { color: #40a070 } /* Literal.Number */
+.highlight .s { color: #4070a0 } /* Literal.String */
+.highlight .na { color: #4070a0 } /* Name.Attribute */
+.highlight .nb { color: #007020 } /* Name.Builtin */
+.highlight .nc { color: #0e84b5; font-weight: bold } /* Name.Class */
+.highlight .no { color: #60add5 } /* Name.Constant */
+.highlight .nd { color: #555555; font-weight: bold } /* Name.Decorator */
+.highlight .ni { color: #d55537; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #007020 } /* Name.Exception */
+.highlight .nf { color: #06287e } /* Name.Function */
+.highlight .nl { color: #002070; font-weight: bold } /* Name.Label */
+.highlight .nn { color: #0e84b5; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #062873; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #bb60d5 } /* Name.Variable */
+.highlight .ow { color: #007020; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mb { color: #40a070 } /* Literal.Number.Bin */
+.highlight .mf { color: #40a070 } /* Literal.Number.Float */
+.highlight .mh { color: #40a070 } /* Literal.Number.Hex */
+.highlight .mi { color: #40a070 } /* Literal.Number.Integer */
+.highlight .mo { color: #40a070 } /* Literal.Number.Oct */
+.highlight .sb { color: #4070a0 } /* Literal.String.Backtick */
+.highlight .sc { color: #4070a0 } /* Literal.String.Char */
+.highlight .sd { color: #4070a0; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #4070a0 } /* Literal.String.Double */
+.highlight .se { color: #4070a0; font-weight: bold } /* Literal.String.Escape */
+.highlight .sh { color: #4070a0 } /* Literal.String.Heredoc */
+.highlight .si { color: #70a0d0; font-style: italic } /* Literal.String.Interpol */
+.highlight .sx { color: #c65d09 } /* Literal.String.Other */
+.highlight .sr { color: #235388 } /* Literal.String.Regex */
+.highlight .s1 { color: #4070a0 } /* Literal.String.Single */
+.highlight .ss { color: #517918 } /* Literal.String.Symbol */
+.highlight .bp { color: #007020 } /* Name.Builtin.Pseudo */
+.highlight .vc { color: #bb60d5 } /* Name.Variable.Class */
+.highlight .vg { color: #bb60d5 } /* Name.Variable.Global */
+.highlight .vi { color: #bb60d5 } /* Name.Variable.Instance */
+.highlight .il { color: #40a070 } /* Literal.Number.Integer.Long */</style>
+<h1>stuq-wxapp</h1>
+
+<p>狼叔带你一起玩转微信应用号</p>
+
+<blockquote>
+<p>微信小程序开发适合你吗？</p>
+</blockquote>
+
+<p>如果想邀请分享，请邮寄给我shiren1118@126.com,如果时间ok，我会尽量分享</p>
+
+<h2>讲师介绍</h2>
+
+<p>英文版本</p>
+
+<p>Afred Sang（aka i5ting）</p>
+
+<p>Alfred Sang (aka i5ting), CTO of Aircos, top trainer of StuQ, author of the open source project Moa.js, and also an evangelist of Node.js. The uniqueness of his experience makes him a full stack practitioner. He served at Sina, NQ Mobile by playing several major roles, such as Chief Architect, R&amp;D Director. Currently, he is focusing on technical architecture and organization/talent development. A book from him, named as &quot;Smashing Node.js 6: Koa Everywhere&quot;, is also on the way.</p>
+
+<p>中文版</p>
+
+<p>桑世龙（网名i5ting），空弦科技 CTO，StuQ 明星讲师，开源项目 Moajs 作者，Node.js 技术布道者
+曾就职在新浪、网秦，曾做过前端、后端、数据分析、移动端负责人、做过首席架构师、技术总监，全栈技术实践者，目前主要关注技术架构和团队梯队建设方向，正在写一个本新书《更了不起的 Node 4：将下一代 Web 框架 Koa 进行到底》</p>
+
+<h1>微信小程序是什么？</h1>
+
+<p>先回顾一下微信应用号发布事件</p>
+
+<p>传闻已久的微信应用号终于得到证实。21日晚间，微信公众号“小道消息”发布文章称收到微信官方的微信应用号内测邀请。根据内测邀请函显示，应用号是微信公众平台提供了一种新的开放能力，开发者可以快速开发一个小程序。</p>
+
+<p>有腾讯内部员工在职场社交软件脉脉上爆料：应用号以“微信公众平台小程序”的名义进行内测发布，核心功能是提供一些本地的API供H5上面的js调用，以此提升微信上H5应用的流畅度。</p>
+
+<p>据爆料，根据腾讯内部数据筛选，第一批应用号内测只邀请了200个微信公众号，若还想收到邀请的公众号只能等待下一批。</p>
+
+<p>早在今年年初，“微信之父”张小龙就透露出正在打造应用号的消息，而后张小龙便在2016年微信公开课PRO上，第一次正式对外公布应用号。</p>
+
+<p>什么是应用号？张小龙介绍说，当用户关注了一个「应用号」之后，就相当于安装了一款 app。在「应用号」内，用户就可以实现对 app 的一些基本诉求。例如，目前许多用户会选在微信钱包中可以买机票、火车票，而不是去下载一个并不常用的买票软件；未来在「应用号」中，可以实现更多的功能。并和其他 app 一样，这个公众号平时是不会向用户主动发送内容的，因此会避免打扰。</p>
+
+<p>据张小龙介绍，推出应用号基于两方面的原因。一是用户手机上可以少下载安装一些软件，平时打开频率不高的软件，可以用应用号代替；二是用户换手机时无需重复安装软件。而对于开发者，尤其是创业者来说，在应用号中实现一个功能远比开发一款 app 省钱省力许多。</p>
+
+<p>一句话简介</p>
+
+<blockquote>
+<p>微信小程序是限于微信提供的MINA框架提供的app开发便捷展示解决方案</p>
+</blockquote>
+
+<h1>从IDE破解开始</h1>
+
+<p>helper for https://github.com/gavinkwoe/weapp-ide-crack</p>
+
+<p>第一批内测只有200个，所以大部分人都没办法弄到，但又想提前体验，怎么办呢？</p>
+
+<p>先从 https://github.com/gavinkwoe/weapp-ide-crack 开始说起吧。</p>
+
+<h2>gavinkwoe是谁？</h2>
+
+<p>gavinkwoe是郭虹宇，老郭以前在腾讯，后来出来在呼家楼那边创业，很棒的公司，他本人技术也是相当到位的，最早是beeframework，代码写的还是相当棒，这货对tcp和c也相当厉害，据说拿过专利。后来bee半火不火的，就搞了类似于css描述生成iOS页面的东西，之后react-native出来之后，貌似就转rn了。而且还带出了QFish这样的优秀小弟，很棒的。</p>
+
+<p>总之，老郭有非常强大的iOS开发能力，所以这次破解微信开发工具也是有一定必然性的。</p>
+
+<h2>小助手：weide</h2>
+
+<p>https://github.com/i5ting/weide</p>
+
+<p>它其实就为了简化安装破解而写的简单小程序。利用node模块和npm强大的机制，简化破解并提供实用辅助功能。特别简单，但还算实用。</p>
+
+<h2>安装小助手</h2>
+<div class="highlight"><pre><span class="nv">$ </span><span class="o">[</span>sudo<span class="o">]</span> npm i -g weide
+</pre></div>
+<h2>小助手用法</h2>
+
+<ul>
+<li>下载微信web开发者工具0.9(百度: https://pan.baidu.com/s/1pLxqFzH （密码: bwt9）) 位置 /Applications/微信web开发者工具.app/</li>
+<li>下载微信web开发者工具0.7(百度: https://pan.baidu.com/s/1pLTKIqJ （密码: iswg）) 位置 /Applications/微信web开发者工具0.7.app/</li>
+</ul>
+
+<p>如果开发工具安装目录是/Applications/微信web开发者工具.app/，无需配置，一条命令即可</p>
+<div class="highlight"><pre><span class="nv">$ </span>weide
+</pre></div>
+<p>否则需要配置环境变量</p>
+
+<p>mac</p>
+<div class="highlight"><pre><span class="nv">$ </span><span class="nb">export </span><span class="nv">WECHAT_IDE</span><span class="o">=</span>/Applications/微信web开发者工具0.9.app/
+<span class="nv">$ </span>weide
+</pre></div>
+<p>windows cmd</p>
+<div class="highlight"><pre><span class="nv">$ </span><span class="nb">set </span><span class="nv">WECHAT_IDE</span><span class="o">=</span>/Applications/微信web开发者工具0.9.app/
+<span class="nv">$ </span>weide
+</pre></div>
+<h2>项目创建</h2>
+
+<p>用法部分来自老郭 http://www.geek-zoo.com</p>
+
+<ol>
+<li>运行『微信Web开发者工具』</li>
+<li>通过微信扫描二维码</li>
+<li>创建项目
+
+<ul>
+<li>AppID：随便填</li>
+<li>项目名称：随便填</li>
+<li>本地开发目录：选择一个目录</li>
+</ul></li>
+<li>点击「添加项目」
+
+<ul>
+<li>此时如果出错，先退出再重进</li>
+<li>此时，能够看到项目列表了</li>
+</ul></li>
+<li>打开项目</li>
+<li>开始开发</li>
+<li>Good luck</li>
+</ol>
+
+<h2>Demo运行</h2>
+
+<ul>
+<li>创建项目</li>
+<li>打开项目所在目录</li>
+<li>下载「Demo源代码」并解压覆盖</li>
+<li>打开项目</li>
+<li>Good luck</li>
+</ul>
+
+<h2>常见问题</h2>
+
+<ol>
+<li>找不到所要替换的文件
+
+<ul>
+<li>问题原因：开发工具版本不正确，老版本不支持</li>
+<li>解决方案：确保下载的程序版本在0.9.092100以上</li>
+</ul></li>
+<li>Failed to load resource: net::ERR_NAME_NOT_RESOLVED http://1709827360.appservice.open.weixin.qq.com/appservice
+
+<ul>
+<li>问题原因：通常是由于系统设置了代理如Shadowsocks等。</li>
+<li>解决方案：关闭代理，或者依次点击工具栏“动作”-&quot;设置&quot;，选择“不使用任何代理，勾选后直连网络”。</li>
+</ul></li>
+<li>修复asdebug.js报错
+
+<ul>
+<li>问题原因：TypeError: Cannot read property &#39;MaxRequestConcurrent&#39; of undefined</li>
+<li>解决方案：替换 /Resources/app.nw/app/dist/weapp/appservice/asdebug.js<br></li>
+</ul></li>
+<li>扫码登录失败
+
+<ul>
+<li>问题原因：please bind your wechat account to the appid first</li>
+<li>解决方案：先使用0.7版本的进行扫码登陆，登陆成功后，再用0.9的版本打开就直接进入了。</li>
+<li>0.7版本地址：http://dldir1.qq.com/WechatWebDev/release/0.7.0/wechat_web_devtools_0.7.0.dmg</li>
+</ul></li>
+<li>mac版本升级到0.9.092300后，asdebug.js报错
+
+<ul>
+<li>问题原因：TypeError: Cannot read property &#39;MaxRequestConcurrent&#39; of undefined</li>
+<li>解决方案：替换 /Resources/app.nw/app/dist/weapp/appservice/asdebug.js<br></li>
+</ul></li>
+</ol>
+
+<h2>工具截图</h2>
+
+<p><img src="https://cloud.githubusercontent.com/assets/876707/18745196/f4f0488e-80f3-11e6-844b-f45d7e52a23c.png" alt="IDE"></p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/876707/18745200/f7a74870-80f3-11e6-83cf-df00f7f87f56.png" alt="IDE"></p>
+
+<h2>禁用自动升级</h2>
+
+<p>破解之后，微信官方立马2个通宵，修复了大量问题，包括store命名错误，自动升级。可以说之前的版本是没有被特意“保护”的，所以可以挖出更多细节，nw.js的升级机制很简单，非常容易破解</p>
+<div class="highlight"><pre><span class="nv">$ </span>wecrack
+</pre></div>
+<p>会修改Contents/Resources/app.nw/package.json的版本号，避免自动升级</p>
+
+<h2>一键美化压缩js代码</h2>
+
+<p>会读取默认安装位置，或环境变量里的WECHAT_IDE下的所有js都会美化</p>
+<div class="highlight"><pre><span class="nv">$ </span>allb
+</pre></div>
+<h2>调试</h2>
+<div class="highlight"><pre><span class="nv">$ DEBUG</span><span class="o">=</span>weide weide
+</pre></div>
+<h1>实例：用cnode社区api做微信小应用</h1>
+
+<p>https://github.com/coolfishstudio/wechat-webapp-cnode</p>
+
+<h2>导入项目</h2>
+
+<p>添加项目</p>
+
+<p><img src="images/import/1.png" alt="1"></p>
+
+<p>选择源码所在目录</p>
+
+<p><img src="images/import/2.png" alt="2"></p>
+
+<p>完整信息</p>
+
+<p><img src="images/import/3.png" alt="3"></p>
+
+<h2>首页</h2>
+
+<p>效果</p>
+
+<h3>布局</h3>
+
+<p><img src="images/layout.png" alt="Layout"></p>
+
+<p>example/pages/topics/topics.wxml</p>
+<div class="highlight"><pre><span class="c">&lt;!--posts.wxml--&gt;</span>
+<span class="nt">&lt;view</span> <span class="na">class=</span><span class="s">&quot;topics-main&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;view</span> <span class="na">class=</span><span class="s">&quot;top-bar&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;view</span> <span class="na">class=</span><span class="s">&quot;top-bar-item&quot;</span> <span class="na">id=</span><span class="s">&quot;all&quot;</span> <span class="na">catchtap=</span><span class="s">&quot;onTapTag&quot;</span><span class="nt">&gt;</span>全部<span class="nt">&lt;/view&gt;</span>
+    <span class="nt">&lt;view</span> <span class="na">class=</span><span class="s">&quot;top-bar-item&quot;</span> <span class="na">id=</span><span class="s">&quot;good&quot;</span> <span class="na">catchtap=</span><span class="s">&quot;onTapTag&quot;</span><span class="nt">&gt;</span>精华<span class="nt">&lt;/view&gt;</span>
+    <span class="nt">&lt;view</span> <span class="na">class=</span><span class="s">&quot;top-bar-item&quot;</span> <span class="na">id=</span><span class="s">&quot;share&quot;</span> <span class="na">catchtap=</span><span class="s">&quot;onTapTag&quot;</span><span class="nt">&gt;</span>分享<span class="nt">&lt;/view&gt;</span>
+    <span class="nt">&lt;view</span> <span class="na">class=</span><span class="s">&quot;top-bar-item&quot;</span> <span class="na">id=</span><span class="s">&quot;ask&quot;</span> <span class="na">catchtap=</span><span class="s">&quot;onTapTag&quot;</span><span class="nt">&gt;</span>问答<span class="nt">&lt;/view&gt;</span>
+    <span class="nt">&lt;view</span> <span class="na">class=</span><span class="s">&quot;top-bar-item&quot;</span> <span class="na">id=</span><span class="s">&quot;job&quot;</span> <span class="na">catchtap=</span><span class="s">&quot;onTapTag&quot;</span><span class="nt">&gt;</span>招聘<span class="nt">&lt;/view&gt;</span>
+  <span class="nt">&lt;/view&gt;</span>
+  <span class="nt">&lt;scroll-view</span> <span class="na">class=</span><span class="s">&quot;posts-list&quot;</span> <span class="na">style=</span><span class="s">&quot;height:100%&quot;</span> <span class="na">scroll-y=</span><span class="s">&quot;true&quot;</span> <span class="na">bindscrolltolower=</span><span class="s">&quot;lower&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;block</span> <span class="na">wx:for=</span><span class="s">&quot;{{postsList}}&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;view</span> <span class="na">class=</span><span class="s">&quot;posts-item&quot;</span> <span class="na">index=</span><span class="s">&quot;{{index}}&quot;</span> <span class="na">id=</span><span class="s">&quot;{{item.id}}&quot;</span> <span class="na">catchtap=</span><span class="s">&quot;redictDetail&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;view</span> <span class="na">class=</span><span class="s">&quot;author&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;image</span> <span class="na">class=</span><span class="s">&quot;author-avatar&quot;</span> <span class="na">src=</span><span class="s">&quot;{{item.author.avatar_url}}&quot;</span><span class="nt">&gt;&lt;/image&gt;</span>
+          <span class="nt">&lt;view</span> <span class="na">class=</span><span class="s">&quot;author-name&quot;</span><span class="nt">&gt;</span>{{item.author.loginname}}<span class="nt">&lt;/view&gt;</span>
+          <span class="nt">&lt;view</span> <span class="na">class=</span><span class="s">&quot;posts-tag hot&quot;</span> <span class="na">wx:if=</span><span class="s">&quot;{{item.top === true}}&quot;</span><span class="nt">&gt;</span>置顶<span class="nt">&lt;/view&gt;</span>
+          <span class="nt">&lt;view</span> <span class="na">class=</span><span class="s">&quot;posts-tag&quot;</span> <span class="na">wx:if=</span><span class="s">&quot;{{item.good === true}}&quot;</span><span class="nt">&gt;</span>精华<span class="nt">&lt;/view&gt;</span>
+          <span class="nt">&lt;view</span> <span class="na">class=</span><span class="s">&quot;posts-last-reply&quot;</span><span class="nt">&gt;</span>{{item.last_reply_at}}<span class="nt">&lt;/view&gt;</span>
+        <span class="nt">&lt;/view&gt;</span>
+        <span class="nt">&lt;view</span> <span class="na">class=</span><span class="s">&quot;posts-title&quot;</span><span class="nt">&gt;</span>{{item.title}}<span class="nt">&lt;/view&gt;</span>
+        <span class="nt">&lt;view</span> <span class="na">class=</span><span class="s">&quot;bar-info&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;view</span> <span class="na">class=</span><span class="s">&quot;bar-info-item&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;image</span> <span class="na">class=</span><span class="s">&quot;bar-info-item-icon&quot;</span> <span class="na">src=</span><span class="s">&quot;/images/icon/reply.png&quot;</span><span class="nt">&gt;&lt;/image&gt;</span>
+            <span class="nt">&lt;view</span> <span class="na">class=</span><span class="s">&quot;bar-info-item-number&quot;</span><span class="nt">&gt;</span>{{item.reply_count}}<span class="nt">&lt;/view&gt;</span>
+          <span class="nt">&lt;/view&gt;</span>
+          <span class="nt">&lt;view</span> <span class="na">class=</span><span class="s">&quot;bar-info-item&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;image</span> <span class="na">class=</span><span class="s">&quot;bar-info-item-icon&quot;</span> <span class="na">src=</span><span class="s">&quot;/images/icon/visit.png&quot;</span><span class="nt">&gt;&lt;/image&gt;</span>
+            <span class="nt">&lt;view</span> <span class="na">class=</span><span class="s">&quot;bar-info-item-number&quot;</span><span class="nt">&gt;</span>{{item.visit_count}}<span class="nt">&lt;/view&gt;</span>
+          <span class="nt">&lt;/view&gt;</span>
+        <span class="nt">&lt;/view&gt;</span>
+      <span class="nt">&lt;/view&gt;</span>
+    <span class="nt">&lt;/block&gt;</span>
+  <span class="nt">&lt;/scroll-view&gt;</span>
+
+  <span class="nt">&lt;loading</span> <span class="na">hidden=</span><span class="s">&quot;{{hidden}}&quot;</span><span class="nt">&gt;</span>
+    加载中...
+  <span class="nt">&lt;/loading&gt;</span>
+<span class="nt">&lt;/view&gt;</span>
+</pre></div>
+<p>三大部分</p>
+
+<ul>
+<li>top-bar   分类是普通的view</li>
+<li>posts-list  帖子列表，是scroll-view</li>
+<li>loading  内置的组件，默认隐藏</li>
+</ul>
+
+<blockquote>
+<p>简单点说，就是你们误会了的组件</p>
+</blockquote>
+
+<p>是不是跟vue、react很像？</p>
+
+<p>http://wxopen.notedown.cn/component/</p>
+
+<p><img src="images/component.png" alt="Component"></p>
+
+<h3>帖子列表</h3>
+<div class="highlight"><pre>  <span class="nt">&lt;scroll-view</span> <span class="na">class=</span><span class="s">&quot;posts-list&quot;</span> <span class="na">style=</span><span class="s">&quot;height:100%&quot;</span> <span class="na">scroll-y=</span><span class="s">&quot;true&quot;</span> <span class="na">bindscrolltolower=</span><span class="s">&quot;lower&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;block</span> <span class="na">wx:for=</span><span class="s">&quot;{{postsList}}&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;view</span> <span class="na">class=</span><span class="s">&quot;posts-item&quot;</span> <span class="na">index=</span><span class="s">&quot;{{index}}&quot;</span> <span class="na">id=</span><span class="s">&quot;{{item.id}}&quot;</span> <span class="na">catchtap=</span><span class="s">&quot;redictDetail&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;view</span> <span class="na">class=</span><span class="s">&quot;author&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;image</span> <span class="na">class=</span><span class="s">&quot;author-avatar&quot;</span> <span class="na">src=</span><span class="s">&quot;{{item.author.avatar_url}}&quot;</span><span class="nt">&gt;&lt;/image&gt;</span>
+          <span class="nt">&lt;view</span> <span class="na">class=</span><span class="s">&quot;author-name&quot;</span><span class="nt">&gt;</span>{{item.author.loginname}}<span class="nt">&lt;/view&gt;</span>
+          <span class="nt">&lt;view</span> <span class="na">class=</span><span class="s">&quot;posts-tag hot&quot;</span> <span class="na">wx:if=</span><span class="s">&quot;{{item.top === true}}&quot;</span><span class="nt">&gt;</span>置顶<span class="nt">&lt;/view&gt;</span>
+          <span class="nt">&lt;view</span> <span class="na">class=</span><span class="s">&quot;posts-tag&quot;</span> <span class="na">wx:if=</span><span class="s">&quot;{{item.good === true}}&quot;</span><span class="nt">&gt;</span>精华<span class="nt">&lt;/view&gt;</span>
+          <span class="nt">&lt;view</span> <span class="na">class=</span><span class="s">&quot;posts-last-reply&quot;</span><span class="nt">&gt;</span>{{item.last_reply_at}}<span class="nt">&lt;/view&gt;</span>
+        <span class="nt">&lt;/view&gt;</span>
+        <span class="nt">&lt;view</span> <span class="na">class=</span><span class="s">&quot;posts-title&quot;</span><span class="nt">&gt;</span>{{item.title}}<span class="nt">&lt;/view&gt;</span>
+        <span class="nt">&lt;view</span> <span class="na">class=</span><span class="s">&quot;bar-info&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;view</span> <span class="na">class=</span><span class="s">&quot;bar-info-item&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;image</span> <span class="na">class=</span><span class="s">&quot;bar-info-item-icon&quot;</span> <span class="na">src=</span><span class="s">&quot;/images/icon/reply.png&quot;</span><span class="nt">&gt;&lt;/image&gt;</span>
+            <span class="nt">&lt;view</span> <span class="na">class=</span><span class="s">&quot;bar-info-item-number&quot;</span><span class="nt">&gt;</span>{{item.reply_count}}<span class="nt">&lt;/view&gt;</span>
+          <span class="nt">&lt;/view&gt;</span>
+          <span class="nt">&lt;view</span> <span class="na">class=</span><span class="s">&quot;bar-info-item&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;image</span> <span class="na">class=</span><span class="s">&quot;bar-info-item-icon&quot;</span> <span class="na">src=</span><span class="s">&quot;/images/icon/visit.png&quot;</span><span class="nt">&gt;&lt;/image&gt;</span>
+            <span class="nt">&lt;view</span> <span class="na">class=</span><span class="s">&quot;bar-info-item-number&quot;</span><span class="nt">&gt;</span>{{item.visit_count}}<span class="nt">&lt;/view&gt;</span>
+          <span class="nt">&lt;/view&gt;</span>
+        <span class="nt">&lt;/view&gt;</span>
+      <span class="nt">&lt;/view&gt;</span>
+    <span class="nt">&lt;/block&gt;</span>
+  <span class="nt">&lt;/scroll-view&gt;</span>
+</pre></div>
+<p>布局是scroll-view，然后嵌入了</p>
+<div class="highlight"><pre><span class="nt">&lt;block</span> <span class="na">wx:for=</span><span class="s">&quot;{{postsList}}&quot;</span><span class="nt">&gt;</span>
+
+<span class="nt">&lt;/block&gt;</span>
+</pre></div>
+<p>像不像ejs里的</p>
+<div class="highlight"><pre><span class="nt">&lt;ul&gt;</span>
+<span class="cp">&lt;%</span> <span class="k">for</span><span class="p">(</span><span class="n">var</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="n">supplies</span><span class="o">.</span><span class="n">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span><span class="cp">%&gt;</span>
+   <span class="nt">&lt;li&gt;</span><span class="cp">&lt;%=</span> <span class="n">supplies</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="cp">%&gt;</span><span class="nt">&lt;/li&gt;</span>
+<span class="cp">&lt;%</span> <span class="p">}</span> <span class="cp">%&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</pre></div>
+<p>然后我们看看里面的单条展示</p>
+
+<p><img src="images/cell.png" alt="Cell"></p>
+<div class="highlight"><pre>      <span class="nt">&lt;view</span> <span class="na">class=</span><span class="s">&quot;posts-item&quot;</span> <span class="na">index=</span><span class="s">&quot;{{index}}&quot;</span> <span class="na">id=</span><span class="s">&quot;{{item.id}}&quot;</span> <span class="na">catchtap=</span><span class="s">&quot;redictDetail&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;view</span> <span class="na">class=</span><span class="s">&quot;author&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;image</span> <span class="na">class=</span><span class="s">&quot;author-avatar&quot;</span> <span class="na">src=</span><span class="s">&quot;{{item.author.avatar_url}}&quot;</span><span class="nt">&gt;&lt;/image&gt;</span>
+          <span class="nt">&lt;view</span> <span class="na">class=</span><span class="s">&quot;author-name&quot;</span><span class="nt">&gt;</span>{{item.author.loginname}}<span class="nt">&lt;/view&gt;</span>
+          <span class="nt">&lt;view</span> <span class="na">class=</span><span class="s">&quot;posts-tag hot&quot;</span> <span class="na">wx:if=</span><span class="s">&quot;{{item.top === true}}&quot;</span><span class="nt">&gt;</span>置顶<span class="nt">&lt;/view&gt;</span>
+          <span class="nt">&lt;view</span> <span class="na">class=</span><span class="s">&quot;posts-tag&quot;</span> <span class="na">wx:if=</span><span class="s">&quot;{{item.good === true}}&quot;</span><span class="nt">&gt;</span>精华<span class="nt">&lt;/view&gt;</span>
+          <span class="nt">&lt;view</span> <span class="na">class=</span><span class="s">&quot;posts-last-reply&quot;</span><span class="nt">&gt;</span>{{item.last_reply_at}}<span class="nt">&lt;/view&gt;</span>
+        <span class="nt">&lt;/view&gt;</span>
+        <span class="nt">&lt;view</span> <span class="na">class=</span><span class="s">&quot;posts-title&quot;</span><span class="nt">&gt;</span>{{item.title}}<span class="nt">&lt;/view&gt;</span>
+        <span class="nt">&lt;view</span> <span class="na">class=</span><span class="s">&quot;bar-info&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;view</span> <span class="na">class=</span><span class="s">&quot;bar-info-item&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;image</span> <span class="na">class=</span><span class="s">&quot;bar-info-item-icon&quot;</span> <span class="na">src=</span><span class="s">&quot;/images/icon/reply.png&quot;</span><span class="nt">&gt;&lt;/image&gt;</span>
+            <span class="nt">&lt;view</span> <span class="na">class=</span><span class="s">&quot;bar-info-item-number&quot;</span><span class="nt">&gt;</span>{{item.reply_count}}<span class="nt">&lt;/view&gt;</span>
+          <span class="nt">&lt;/view&gt;</span>
+          <span class="nt">&lt;view</span> <span class="na">class=</span><span class="s">&quot;bar-info-item&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;image</span> <span class="na">class=</span><span class="s">&quot;bar-info-item-icon&quot;</span> <span class="na">src=</span><span class="s">&quot;/images/icon/visit.png&quot;</span><span class="nt">&gt;&lt;/image&gt;</span>
+            <span class="nt">&lt;view</span> <span class="na">class=</span><span class="s">&quot;bar-info-item-number&quot;</span><span class="nt">&gt;</span>{{item.visit_count}}<span class="nt">&lt;/view&gt;</span>
+          <span class="nt">&lt;/view&gt;</span>
+        <span class="nt">&lt;/view&gt;</span>
+      <span class="nt">&lt;/view&gt;</span>
+</pre></div>
+<p>可以看出是一个cell里分了3行</p>
+
+<ul>
+<li>第1行 author   作者、时间</li>
+<li>第2行 posts-title 标题</li>
+<li>第3行 bar-info 评论，查看次数</li>
+</ul>
+
+<p>然后单行，以author为例子</p>
+<div class="highlight"><pre>        <span class="nt">&lt;view</span> <span class="na">class=</span><span class="s">&quot;author&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;image</span> <span class="na">class=</span><span class="s">&quot;author-avatar&quot;</span> <span class="na">src=</span><span class="s">&quot;{{item.author.avatar_url}}&quot;</span><span class="nt">&gt;&lt;/image&gt;</span>
+          <span class="nt">&lt;view</span> <span class="na">class=</span><span class="s">&quot;author-name&quot;</span><span class="nt">&gt;</span>{{item.author.loginname}}<span class="nt">&lt;/view&gt;</span>
+          <span class="nt">&lt;view</span> <span class="na">class=</span><span class="s">&quot;posts-tag hot&quot;</span> <span class="na">wx:if=</span><span class="s">&quot;{{item.top === true}}&quot;</span><span class="nt">&gt;</span>置顶<span class="nt">&lt;/view&gt;</span>
+          <span class="nt">&lt;view</span> <span class="na">class=</span><span class="s">&quot;posts-tag&quot;</span> <span class="na">wx:if=</span><span class="s">&quot;{{item.good === true}}&quot;</span><span class="nt">&gt;</span>精华<span class="nt">&lt;/view&gt;</span>
+          <span class="nt">&lt;view</span> <span class="na">class=</span><span class="s">&quot;posts-last-reply&quot;</span><span class="nt">&gt;</span>{{item.last_reply_at}}<span class="nt">&lt;/view&gt;</span>
+        <span class="nt">&lt;/view&gt;</span>
+</pre></div>
+<p>各位看到这里有啥感觉呢？</p>
+
+<h3>如何获取数据？</h3>
+
+<p>上面模板里的<code>for</code> + 描述用的block，有一个postsList，如果有它就可以显示了。那么如何它在哪里呢？</p>
+
+<p>其实在example/pages/topics/topics.js里的</p>
+<div class="highlight"><pre><span class="vg">Page</span><span class="p">({</span>
+<span class="w">  </span><span class="nl">data:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nl">title:</span><span class="w"> </span><span class="c1">&#39;话题列表&#39;,</span>
+<span class="w">    </span><span class="nl">postsList:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">    </span><span class="nl">hidden:</span><span class="w"> </span><span class="vg">false</span><span class="p">,</span>
+<span class="w">    </span><span class="nl">page:</span><span class="w"> </span><span class="il">1</span><span class="p">,</span>
+<span class="w">    </span><span class="nl">tab:</span><span class="w"> </span><span class="c1">&#39;all&#39;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="o">...</span>
+<span class="p">})</span>
+</pre></div>
+<p>注意data里的postsList。也就是说data里的面内容会和模板一起编译，有木有明白点什么？</p>
+
+<h3>和模板引擎像么？</h3>
+
+<p>模板引擎原理</p>
+
+<blockquote>
+<p>编译（模板 + 数据）= html</p>
+</blockquote>
+
+<p>你只要setData,它就会自动渲染，是不是有点像mvvm？$scope?</p>
+<div class="highlight"><pre><span class="w">        </span><span class="vg">self</span><span class="o">.</span><span class="vg">setData</span><span class="p">({</span>
+<span class="w">          </span><span class="nl">postsList:</span><span class="w"> </span><span class="vg">self</span><span class="o">.</span><span class="vg">data</span><span class="o">.</span><span class="vg">postsList</span><span class="o">.</span><span class="vg">concat</span><span class="p">(</span><span class="vg">res</span><span class="o">.</span><span class="vg">data</span><span class="o">.</span><span class="vg">data</span><span class="o">.</span><span class="vg">map</span><span class="p">(</span><span class="vg">function</span><span class="w"> </span><span class="p">(</span><span class="vg">item</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="vg">item</span><span class="o">.</span><span class="vg">last_reply_at</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="vg">util</span><span class="o">.</span><span class="vg">getDateDiff</span><span class="p">(</span><span class="vg">new</span><span class="w"> </span><span class="vg">Date</span><span class="p">(</span><span class="vg">item</span><span class="o">.</span><span class="vg">last_reply_at</span><span class="p">));</span>
+<span class="w">            </span><span class="vg">return</span><span class="w"> </span><span class="vg">item</span><span class="p">;</span>
+<span class="w">          </span><span class="p">}))</span>
+<span class="w">        </span><span class="p">});</span>
+</pre></div>
+<p>只不过所有的数据都放到data作为上下文，这其实是简化了的方案。</p>
+
+<h3>http请求</h3>
+
+<p>api是获取主页列表</p>
+
+<p><img src="images/api.png" alt="Api"></p>
+
+<p>具体的调用wx.request向服务器发送</p>
+<div class="highlight"><pre><span class="w">    </span><span class="vg">wx</span><span class="o">.</span><span class="vg">request</span><span class="p">({</span>
+<span class="w">      </span><span class="nl">url:</span><span class="w"> </span><span class="vg">Api</span><span class="o">.</span><span class="vg">getTopics</span><span class="p">(</span><span class="vg">data</span><span class="p">),</span>
+<span class="w">      </span><span class="nl">success:</span><span class="w"> </span><span class="vg">function</span><span class="w"> </span><span class="p">(</span><span class="vg">res</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="vg">self</span><span class="o">.</span><span class="vg">setData</span><span class="p">({</span>
+<span class="w">          </span><span class="nl">postsList:</span><span class="w"> </span><span class="vg">self</span><span class="o">.</span><span class="vg">data</span><span class="o">.</span><span class="vg">postsList</span><span class="o">.</span><span class="vg">concat</span><span class="p">(</span><span class="vg">res</span><span class="o">.</span><span class="vg">data</span><span class="o">.</span><span class="vg">data</span><span class="o">.</span><span class="vg">map</span><span class="p">(</span><span class="vg">function</span><span class="w"> </span><span class="p">(</span><span class="vg">item</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="vg">item</span><span class="o">.</span><span class="vg">last_reply_at</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="vg">util</span><span class="o">.</span><span class="vg">getDateDiff</span><span class="p">(</span><span class="vg">new</span><span class="w"> </span><span class="vg">Date</span><span class="p">(</span><span class="vg">item</span><span class="o">.</span><span class="vg">last_reply_at</span><span class="p">));</span>
+<span class="w">            </span><span class="vg">return</span><span class="w"> </span><span class="vg">item</span><span class="p">;</span>
+<span class="w">          </span><span class="p">}))</span>
+<span class="w">        </span><span class="p">});</span>
+<span class="w">        </span><span class="vg">setTimeout</span><span class="p">(</span><span class="vg">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="vg">self</span><span class="o">.</span><span class="vg">setData</span><span class="p">({</span>
+<span class="w">            </span><span class="nl">hidden:</span><span class="w"> </span><span class="vg">true</span>
+<span class="w">          </span><span class="p">});</span>
+<span class="w">        </span><span class="p">},</span><span class="w"> </span><span class="il">300</span><span class="p">);</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">});</span>
+</pre></div>
+<p>这里很简单</p>
+
+<ul>
+<li>get请求</li>
+<li>url = Api.getTopics(data)</li>
+<li>success 是当请求成功的时候的回调处理</li>
+</ul>
+
+<p>和ajax基本一样，对比$.ajax，想想</p>
+
+<p><img src="images/request.png" alt="Request"></p>
+
+<p>更多示例</p>
+<div class="highlight"><pre><span class="vg">wx</span><span class="o">.</span><span class="vg">request</span><span class="p">({</span>
+<span class="w">  </span><span class="nl">url:</span><span class="w"> </span><span class="c1">&#39;test.php&#39;,</span>
+<span class="w">  </span><span class="nl">data:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">     </span><span class="nl">x:</span><span class="w"> </span><span class="c1">&#39;&#39; ,</span>
+<span class="w">     </span><span class="nl">y:</span><span class="w"> </span><span class="c1">&#39;&#39;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nl">header:</span><span class="p">{</span>
+<span class="w">      </span><span class="s2">&quot;Content-Type&quot;</span><span class="o">:</span><span class="s2">&quot;application/json&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nl">success:</span><span class="w"> </span><span class="vg">function</span><span class="p">(</span><span class="vg">res</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">     </span><span class="vg">var</span><span class="w"> </span><span class="vg">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="vg">res</span><span class="o">.</span><span class="vg">data</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">});</span>
+</pre></div>
+<p>剩下的我们还需要啥呢？</p>
+
+<blockquote>
+<p>后台接口api开发就够了</p>
+</blockquote>
+
+<h3>Page的生命周期</h3>
+
+<p>http://wxopen.notedown.cn/framework/app-service/page.html</p>
+
+<p><img src="images/lifecycle.png" alt="Lifecycle"></p>
+
+<p>群里有iOS工程师</p>
+<div class="highlight"><pre><span class="k">@interface</span> <span class="nc">ViewController</span> <span class="p">()</span>
+
+<span class="k">@end</span>
+
+<span class="k">@implementation</span> <span class="nc">ViewController</span>
+
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">viewDidLoad</span> <span class="p">{</span>
+    <span class="p">[</span><span class="nb">super</span> <span class="n">viewDidLoad</span><span class="p">];</span>
+    <span class="c1">// Do any additional setup after loading the view, typically from a nib.</span>
+<span class="p">}</span>
+
+<span class="p">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">didReceiveMemoryWarning</span> <span class="p">{</span>
+    <span class="p">[</span><span class="nb">super</span> <span class="n">didReceiveMemoryWarning</span><span class="p">];</span>
+    <span class="c1">// Dispose of any resources that can be recreated.</span>
+<span class="p">}</span>
+
+<span class="k">@end</span>
+</pre></div>
+<p>页面刚进来的时候掉的viewDidLoad，而html里的onload，是不是非常类似？会有人想到dp里的模板模式么？</p>
+<div class="highlight"><pre><span class="c1">//index.js</span>
+<span class="n">Page</span><span class="p">({</span>
+  <span class="nl">data:</span> <span class="p">{</span>
+    <span class="nl">text:</span> <span class="s">&quot;This is page data.&quot;</span>
+  <span class="p">},</span>
+  <span class="nl">onLoad:</span> <span class="k">function</span><span class="p">(</span><span class="n">options</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// Do some initialize when page load.</span>
+  <span class="p">},</span>
+  <span class="nl">onReady:</span> <span class="k">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// Do something when page ready.</span>
+  <span class="p">},</span>
+  <span class="nl">onShow:</span> <span class="k">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// Do something when page show.</span>
+  <span class="p">},</span>
+  <span class="nl">onHide:</span> <span class="k">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// Do something when page hide.</span>
+  <span class="p">},</span>
+  <span class="nl">onUnload:</span> <span class="k">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// Do something when page close.</span>
+  <span class="p">},</span>
+  <span class="c1">// Event handler.</span>
+  <span class="nl">viewTap:</span> <span class="k">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="n">setData</span><span class="p">({</span>
+      <span class="nl">text:</span> <span class="p">&#39;</span><span class="n">Set</span> <span class="n">some</span> <span class="n">data</span> <span class="k">for</span> <span class="n">updating</span> <span class="n">view</span><span class="p">.&#39;</span>
+    <span class="p">})</span>
+  <span class="p">}</span>
+<span class="p">})</span>
+</pre></div>
+<h3>tab</h3>
+
+<p>模板</p>
+<div class="highlight"><pre>  <span class="nt">&lt;view</span> <span class="na">class=</span><span class="s">&quot;top-bar&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;view</span> <span class="na">class=</span><span class="s">&quot;top-bar-item&quot;</span> <span class="na">id=</span><span class="s">&quot;all&quot;</span> <span class="na">catchtap=</span><span class="s">&quot;onTapTag&quot;</span><span class="nt">&gt;</span>全部<span class="nt">&lt;/view&gt;</span>
+    <span class="nt">&lt;view</span> <span class="na">class=</span><span class="s">&quot;top-bar-item&quot;</span> <span class="na">id=</span><span class="s">&quot;good&quot;</span> <span class="na">catchtap=</span><span class="s">&quot;onTapTag&quot;</span><span class="nt">&gt;</span>精华<span class="nt">&lt;/view&gt;</span>
+    <span class="nt">&lt;view</span> <span class="na">class=</span><span class="s">&quot;top-bar-item&quot;</span> <span class="na">id=</span><span class="s">&quot;share&quot;</span> <span class="na">catchtap=</span><span class="s">&quot;onTapTag&quot;</span><span class="nt">&gt;</span>分享<span class="nt">&lt;/view&gt;</span>
+    <span class="nt">&lt;view</span> <span class="na">class=</span><span class="s">&quot;top-bar-item&quot;</span> <span class="na">id=</span><span class="s">&quot;ask&quot;</span> <span class="na">catchtap=</span><span class="s">&quot;onTapTag&quot;</span><span class="nt">&gt;</span>问答<span class="nt">&lt;/view&gt;</span>
+    <span class="nt">&lt;view</span> <span class="na">class=</span><span class="s">&quot;top-bar-item&quot;</span> <span class="na">id=</span><span class="s">&quot;job&quot;</span> <span class="na">catchtap=</span><span class="s">&quot;onTapTag&quot;</span><span class="nt">&gt;</span>招聘<span class="nt">&lt;/view&gt;</span>
+  <span class="nt">&lt;/view&gt;</span>
+</pre></div>
+<p>事件触发</p>
+<div class="highlight"><pre><span class="vg">catchtap</span><span class="o">=</span><span class="s2">&quot;onTapTag&quot;</span>
+</pre></div>
+<p>这个也是Page上下文里的方法</p>
+<div class="highlight"><pre><span class="w">  </span><span class="nl">onTapTag:</span><span class="w"> </span><span class="vg">function</span><span class="w"> </span><span class="p">(</span><span class="vg">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="vg">var</span><span class="w"> </span><span class="vg">self</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="vg">this</span><span class="p">;</span>
+<span class="w">    </span><span class="vg">var</span><span class="w"> </span><span class="vg">tab</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="vg">e</span><span class="o">.</span><span class="vg">currentTarget</span><span class="o">.</span><span class="vg">id</span><span class="p">;</span>
+<span class="w">    </span><span class="vg">self</span><span class="o">.</span><span class="vg">setData</span><span class="p">({</span>
+<span class="w">      </span><span class="nl">tab:</span><span class="w"> </span><span class="vg">tab</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="w">    </span><span class="vg">if</span><span class="w"> </span><span class="p">(</span><span class="vg">tab</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="c1">&#39;all&#39;) {</span>
+<span class="w">      </span><span class="vg">this</span><span class="o">.</span><span class="vg">fetchData</span><span class="p">({</span><span class="nl">tab:</span><span class="w"> </span><span class="vg">tab</span><span class="p">});</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="vg">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="vg">this</span><span class="o">.</span><span class="vg">fetchData</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">},</span>
+</pre></div>
+<p>那么如何知道e里都有啥呢？</p>
+
+<p>简单的打印log即可</p>
+
+<p><img src="images/e.png" alt="E"></p>
+
+<p>简单的调试</p>
+
+<p><img src="images/debug.png" alt="Debug"></p>
+
+<h3>上拉加载下一页</h3>
+
+<p>所有的组件能和object是一样，就2各种：属性（基本类型，Boolean，Number，String）和行为（EventHandle）</p>
+<div class="highlight"><pre><span class="w"> </span><span class="o">&lt;</span><span class="vg">scroll</span><span class="o">-</span><span class="vg">view</span><span class="w"> </span><span class="vg">class</span><span class="o">=</span><span class="s2">&quot;posts-list&quot;</span><span class="w"> </span><span class="vg">style</span><span class="o">=</span><span class="s2">&quot;height:100%&quot;</span><span class="w"> </span><span class="vg">scroll</span><span class="o">-</span><span class="vg">y</span><span class="o">=</span><span class="s2">&quot;true&quot;</span><span class="w"> </span><span class="vg">bindscrolltolower</span><span class="o">=</span><span class="s2">&quot;lower&quot;</span><span class="o">&gt;</span>
+</pre></div>
+<p>这里的class，style，scroll-y，bindscrolltolower都是属性，唯一不一样的是bindscrolltolower，它实际上是行为</p>
+<div class="highlight"><pre><span class="vg">bindscrolltolower</span><span class="w">   </span><span class="vg">EventHandle</span><span class="w">     </span><span class="err">滚动到底部</span><span class="o">/</span><span class="err">右边，会触发</span><span class="vg">scrolltolower</span><span class="err">事件</span>
+</pre></div>
+<p>即我们在移动端常说的上拉加载更多。</p>
+
+<p>这和我们写react、vue实际上是非常类似的。</p>
+
+<p>https://github.com/airyland/vux/blob/master/src/components/panel/index.vue</p>
+<div class="highlight"><pre><span class="nt">&lt;template&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;weui_panel weui_panel_access&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;weui_panel_hd&quot;</span> <span class="na">v-if=</span><span class="s">&quot;header&quot;</span> <span class="err">@</span><span class="na">click=</span><span class="s">&quot;onClickHeader&quot;</span> <span class="na">v-html=</span><span class="s">&quot;header&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;weui_panel_bd&quot;</span><span class="nt">&gt;</span>
+      <span class="c">&lt;!--type===&#39;1&#39;--&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">:href=</span><span class="s">&quot;getUrl(item.url)&quot;</span> <span class="na">v-for=</span><span class="s">&quot;item in list&quot;</span> <span class="err">@</span><span class="na">click.prevent=</span><span class="s">&quot;onItemClick(item)&quot;</span> <span class="na">class=</span><span class="s">&quot;weui_media_box weui_media_appmsg&quot;</span> <span class="na">v-if=</span><span class="s">&quot;type === &#39;1&#39;&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;weui_media_hd&quot;</span> <span class="na">v-if=</span><span class="s">&quot;item.src&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">&quot;weui_media_appmsg_thumb&quot;</span> <span class="na">:src=</span><span class="s">&quot;item.src&quot;</span> <span class="na">alt=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;weui_media_bd&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">&quot;weui_media_title&quot;</span><span class="nt">&gt;</span><span class="err">{{</span>item.title}}<span class="nt">&lt;/h4&gt;</span>
+          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;weui_media_desc&quot;</span><span class="nt">&gt;</span><span class="err">{{</span>item.desc}}<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/a&gt;</span>
+      <span class="c">&lt;!--type===&#39;2&#39;--&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;weui_media_box weui_media_text&quot;</span> <span class="na">v-for=</span><span class="s">&quot;item in list&quot;</span> <span class="err">@</span><span class="na">click.prevent=</span><span class="s">&quot;onItemClick(item)&quot;</span> <span class="na">v-if=</span><span class="s">&quot;type === &#39;2&#39;&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">&quot;weui_media_title&quot;</span><span class="nt">&gt;</span><span class="err">{{</span>item.title}}<span class="nt">&lt;/h4&gt;</span>
+          <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;weui_media_desc&quot;</span><span class="nt">&gt;</span><span class="err">{{</span>item.desc}}<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="c">&lt;!--type===&#39;3&#39;--&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;weui_media_box weui_media_small_appmsg&quot;</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;weui_cells weui_cells_access&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;weui_cell&quot;</span> <span class="na">:href=</span><span class="s">&quot;getUrl(item.url)&quot;</span> <span class="na">v-for=</span><span class="s">&quot;item in list&quot;</span> <span class="err">@</span><span class="na">click.prevent=</span><span class="s">&quot;onItemClick(item)&quot;</span> <span class="na">v-if=</span><span class="s">&quot;type === &#39;3&#39;&quot;</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;weui_cell_hd&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;img</span> <span class="na">:src=</span><span class="s">&quot;item.src&quot;</span> <span class="na">alt=</span><span class="s">&quot;&quot;</span> <span class="na">style=</span><span class="s">&quot;width:20px;margin-right:5px;display:block&quot;</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;/div&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;weui_cell_bd weui_cell_primary&quot;</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;p&gt;</span><span class="err">{{</span>item.title}}<span class="nt">&lt;/p&gt;</span>
+              <span class="nt">&lt;/div&gt;</span>
+              <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;weui_cell_ft&quot;</span><span class="nt">&gt;&lt;/span&gt;</span>
+            <span class="nt">&lt;/a&gt;</span>
+          <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;weui_panel_ft&quot;</span> <span class="na">:href=</span><span class="s">&quot;getUrl(footer.url)&quot;</span> <span class="na">v-if=</span><span class="s">&quot;footer &amp;&amp; type !== &#39;3&#39;&quot;</span> <span class="err">@</span><span class="na">click.prevent=</span><span class="s">&quot;onClickFooter&quot;</span> <span class="na">v-html=</span><span class="s">&quot;footer.title&quot;</span><span class="nt">&gt;&lt;/a&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/template&gt;</span>
+
+<span class="nt">&lt;script&gt;</span>
+import <span class="err">{</span> go, getUrl } from &#39;../../libs/router&#39;
+export default <span class="err">{</span>
+  props: <span class="err">{</span>
+    header: String,
+    footer: Object,
+    list: Array,
+    type: <span class="err">{</span>
+      type: String,
+      default: &#39;1&#39;
+    }
+  },
+  methods: <span class="err">{</span>
+    getUrl (url) <span class="err">{</span>
+      return getUrl(url, this.<span class="p">$</span><span class="nv">router</span>)
+    },
+    onClickFooter () <span class="err">{</span>
+      this.<span class="p">$</span><span class="nv">emit</span><span class="p">(</span><span class="s1">&#39;on-click-footer&#39;</span><span class="p">)</span>
+      go(this.footer.url, this.<span class="p">$</span><span class="nv">router</span>)
+    },
+    onClickHeader () <span class="err">{</span>
+      this.<span class="p">$</span><span class="nv">emit</span><span class="p">(</span><span class="s1">&#39;on-click-header&#39;</span><span class="p">)</span>
+    },
+    onItemClick (item) <span class="err">{</span>
+      this.<span class="p">$</span><span class="nv">emit</span><span class="p">(</span><span class="s1">&#39;on-click-item&#39;</span><span class="p">,</span> <span class="err">item</span><span class="p">)</span>
+      go(item.url, this.<span class="p">$</span><span class="nv">router</span>)
+    }
+  }
+}
+<span class="nt">&lt;/script&gt;</span>
+
+<span class="nt">&lt;style</span> <span class="na">lang=</span><span class="s">&quot;less&quot;</span><span class="nt">&gt;</span>
+@import &#39;../../styles/weui/widget/weui_panel/weui_panel&#39;;
+@import &#39;../../styles/weui/widget/weui_media_box/weui_media_box&#39;;
+<span class="nt">&lt;/style&gt;</span>
+</pre></div>
+<h3>loading</h3>
+
+<p>其实非常简单的,定义模板</p>
+<div class="highlight"><pre>  <span class="nt">&lt;loading</span> <span class="na">hidden=</span><span class="s">&quot;{{hidden}}&quot;</span><span class="nt">&gt;</span>
+    加载中...
+  <span class="nt">&lt;/loading&gt;</span>
+</pre></div>
+<p>那这个<code>hidden=&quot;{{hidden}}&quot;</code>呢？模板都是data里的，so</p>
+<div class="highlight"><pre><span class="vg">Page</span><span class="p">({</span>
+<span class="w">  </span><span class="nl">data:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nl">title:</span><span class="w"> </span><span class="c1">&#39;话题列表&#39;,</span>
+<span class="w">    </span><span class="nl">postsList:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">    </span><span class="nl">hidden:</span><span class="w"> </span><span class="vg">false</span><span class="p">,</span>
+<span class="w">    </span><span class="nl">page:</span><span class="w"> </span><span class="il">1</span><span class="p">,</span>
+<span class="w">    </span><span class="nl">tab:</span><span class="w"> </span><span class="c1">&#39;all&#39;</span>
+<span class="w">  </span><span class="p">},</span>
+</pre></div>
+<p>默认是false，因为一进来就要loading。。。</p>
+
+<p>进来的时候通过lifecyle的onload</p>
+<div class="highlight"><pre><span class="w">  </span><span class="nl">onLoad:</span><span class="w"> </span><span class="vg">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="vg">console</span><span class="o">.</span><span class="vg">log</span><span class="p">(</span><span class="il">1</span><span class="p">)</span>
+<span class="w">    </span><span class="vg">this</span><span class="o">.</span><span class="vg">fetchData</span><span class="p">();</span>
+<span class="w">  </span><span class="p">},</span>
+</pre></div>
+<p>然后隐藏loading的操作就在http请求数据之后了。</p>
+<div class="highlight"><pre><span class="w">    </span><span class="vg">wx</span><span class="o">.</span><span class="vg">request</span><span class="p">({</span>
+<span class="w">      </span><span class="nl">url:</span><span class="w"> </span><span class="vg">Api</span><span class="o">.</span><span class="vg">getTopics</span><span class="p">(</span><span class="vg">data</span><span class="p">),</span>
+<span class="w">      </span><span class="nl">success:</span><span class="w"> </span><span class="vg">function</span><span class="w"> </span><span class="p">(</span><span class="vg">res</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="vg">self</span><span class="o">.</span><span class="vg">setData</span><span class="p">({</span>
+<span class="w">          </span><span class="nl">postsList:</span><span class="w"> </span><span class="vg">self</span><span class="o">.</span><span class="vg">data</span><span class="o">.</span><span class="vg">postsList</span><span class="o">.</span><span class="vg">concat</span><span class="p">(</span><span class="vg">res</span><span class="o">.</span><span class="vg">data</span><span class="o">.</span><span class="vg">data</span><span class="o">.</span><span class="vg">map</span><span class="p">(</span><span class="vg">function</span><span class="w"> </span><span class="p">(</span><span class="vg">item</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="vg">item</span><span class="o">.</span><span class="vg">last_reply_at</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="vg">util</span><span class="o">.</span><span class="vg">getDateDiff</span><span class="p">(</span><span class="vg">new</span><span class="w"> </span><span class="vg">Date</span><span class="p">(</span><span class="vg">item</span><span class="o">.</span><span class="vg">last_reply_at</span><span class="p">));</span>
+<span class="w">            </span><span class="vg">return</span><span class="w"> </span><span class="vg">item</span><span class="p">;</span>
+<span class="w">          </span><span class="p">}))</span>
+<span class="w">        </span><span class="p">});</span>
+<span class="w">        </span><span class="vg">setTimeout</span><span class="p">(</span><span class="vg">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="vg">self</span><span class="o">.</span><span class="vg">setData</span><span class="p">({</span>
+<span class="w">            </span><span class="nl">hidden:</span><span class="w"> </span><span class="vg">true</span>
+<span class="w">          </span><span class="p">});</span>
+<span class="w">        </span><span class="p">},</span><span class="w"> </span><span class="il">300</span><span class="p">);</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">});</span>
+</pre></div>
+<p>其中的</p>
+<div class="highlight"><pre><span class="w">          </span><span class="vg">self</span><span class="o">.</span><span class="vg">setData</span><span class="p">({</span>
+<span class="w">            </span><span class="nl">hidden:</span><span class="w"> </span><span class="vg">true</span>
+<span class="w">          </span><span class="p">});</span>
+</pre></div>
+<p>还得上文中说的data是全局上下午吗？</p>
+
+<h3>页面间跳转</h3>
+
+<p>模板定义</p>
+<div class="highlight"><pre><span class="o">&lt;</span><span class="vg">view</span><span class="w"> </span><span class="vg">class</span><span class="o">=</span><span class="s2">&quot;posts-item&quot;</span><span class="w"> </span><span class="vg">index</span><span class="o">=</span><span class="s2">&quot;{{index}}&quot;</span><span class="w"> </span><span class="vg">id</span><span class="o">=</span><span class="s2">&quot;{{item.id}}&quot;</span><span class="w"> </span><span class="vg">catchtap</span><span class="o">=</span><span class="s2">&quot;redictDetail&quot;</span><span class="o">&gt;</span>
+</pre></div>
+<p>注意</p>
+
+<blockquote>
+<p>catchtap=&quot;redictDetail&quot;</p>
+</blockquote>
+
+<p>page里的redictDetail方法</p>
+<div class="highlight"><pre><span class="w">  </span><span class="nl">redictDetail:</span><span class="w"> </span><span class="vg">function</span><span class="w"> </span><span class="p">(</span><span class="vg">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="vg">console</span><span class="o">.</span><span class="vg">log</span><span class="p">(</span><span class="c1">&#39;我要看详情&#39;);</span>
+<span class="w">    </span><span class="vg">var</span><span class="w"> </span><span class="vg">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="vg">e</span><span class="o">.</span><span class="vg">currentTarget</span><span class="o">.</span><span class="vg">id</span><span class="p">,</span>
+<span class="w">        </span><span class="vg">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="c1">&#39;../detail/detail?id=&#39; + id;</span>
+<span class="w">    </span><span class="vg">wx</span><span class="o">.</span><span class="vg">navigateTo</span><span class="p">({</span>
+<span class="w">      </span><span class="nl">url:</span><span class="w"> </span><span class="vg">url</span>
+<span class="w">    </span><span class="p">})</span>
+<span class="w">  </span><span class="p">},</span>
+</pre></div>
+<p>实际上有2种，上面是通过api实现的，还有一种是通过指令来实现的</p>
+<div class="highlight"><pre><span class="nt">&lt;navigator</span> <span class="na">url=</span><span class="s">&quot;navigate?title=navigate&quot;</span> <span class="na">hover-class=</span><span class="s">&quot;navigator-hover&quot;</span><span class="nt">&gt;</span>跳转到新页面<span class="nt">&lt;/navigator&gt;</span>
+<span class="nt">&lt;navigator</span> <span class="na">url=</span><span class="s">&quot;redirect?title=redirect&quot;</span> <span class="err">redirect</span> <span class="na">hover-class=</span><span class="s">&quot;other-navigator-hover&quot;</span><span class="nt">&gt;</span>在当前页打开<span class="nt">&lt;/navigator&gt;</span>
+</pre></div>
+<h3>utils定义</h3>
+
+<p>page里</p>
+<div class="highlight"><pre><span class="c1">// posts.js</span>
+<span class="k">var</span> <span class="n">Api</span> <span class="o">=</span> <span class="n">require</span><span class="p">(&#39;..</span><span class="o">/</span><span class="p">..</span><span class="o">/</span><span class="n">utils</span><span class="o">/</span><span class="n">api</span><span class="p">.</span><span class="n">js</span><span class="p">&#39;);</span>
+<span class="k">var</span> <span class="n">util</span> <span class="o">=</span> <span class="n">require</span><span class="p">(&#39;..</span><span class="o">/</span><span class="p">..</span><span class="o">/</span><span class="n">utils</span><span class="o">/</span><span class="n">util</span><span class="p">.</span><span class="n">js</span><span class="p">&#39;);</span>
+</pre></div>
+<p>api.js具体内容</p>
+<div class="highlight"><pre><span class="c">&#39;use strict&#39;;</span>
+<span class="n">var</span> <span class="n">HOST_URI</span> <span class="o">=</span> <span class="c">&#39;https://cnodejs.org/api/v1&#39;;</span>
+
+<span class="n">var</span> <span class="n">GET_TOPICS</span> <span class="o">=</span> <span class="c">&#39;/topics&#39;;</span>
+<span class="n">var</span> <span class="n">GET_TOPIC_BY_ID</span> <span class="o">=</span> <span class="c">&#39;/topic/&#39;;</span>
+
+<span class="k">function</span> <span class="nf">obj2uri</span> <span class="p">(</span><span class="n">obj</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="kt">Object</span><span class="p">.</span><span class="n">keys</span><span class="p">(</span><span class="n">obj</span><span class="p">).</span><span class="n">map</span><span class="p">(</span><span class="k">function</span> <span class="err">(</span><span class="nf">k</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">encodeURIComponent</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="o">+</span> <span class="c">&#39;=&#39; + encodeURIComponent(obj[k]);</span>
+    <span class="p">}).</span><span class="n">join</span><span class="p">(</span><span class="c">&#39;&amp;&#39;);</span>
+<span class="p">}</span>
+
+<span class="n">module</span><span class="p">.</span><span class="n">exports</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="o">//</span> <span class="err">获取列表数据</span>
+    <span class="n">getTopics</span><span class="p">:</span> <span class="k">function</span> <span class="err">(</span><span class="nf">obj</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">HOST_URI</span> <span class="o">+</span> <span class="n">GET_TOPICS</span> <span class="o">+</span> <span class="c">&#39;?&#39; + obj2uri(obj);</span>
+    <span class="p">},</span>
+    <span class="o">//</span> <span class="err">获取内容页数据</span>
+    <span class="n">getTopicByID</span><span class="p">:</span> <span class="k">function</span> <span class="err">(</span><span class="nf">id</span><span class="p">,</span> <span class="n">obj</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="n">HOST_URI</span> <span class="o">+</span> <span class="n">GET_TOPIC_BY_ID</span> <span class="o">+</span> <span class="n">id</span> <span class="o">+</span> <span class="c">&#39;?&#39; + obj2uri(obj);</span>
+    <span class="p">}</span>
+<span class="p">}</span><span class="err">;</span>
+</pre></div>
+<p>感觉跟啥像？</p>
+
+<h3>Promise?</h3>
+
+<p><img src="images/async.png" alt="Async"></p>
+
+<ul>
+<li><a href="https://cnodejs.org/topic/57eb4e4bea2fa420446d4371">微信小程序使用Promise</a></li>
+</ul>
+
+<h3>wxss</h3>
+
+<p>http://wxopen.notedown.cn/framework/view/wxss.html</p>
+
+<h2>缓存</h2>
+
+<p>这里没有使用，如果使用登录的时候就需要了，比如token</p>
+
+<p>文档 http://wxopen.notedown.cn/api/data.html</p>
+
+<p>k-v的，还是比较有限的</p>
+
+<h2>websocket</h2>
+
+<ul>
+<li>pub/sub</li>
+<li>im</li>
+</ul>
+
+<h1>高级玩法</h1>
+
+<p>https://github.com/MeCKodo/wxapp-cli</p>
+
+<p>优势</p>
+
+<p>1.可以在任意IDE中开发</p>
+
+<p>2.可使用ES6或ES5</p>
+
+<p>3.支持sass和less</p>
+
+<p>4.可以同时编写.html|.wxml，.wxss|.scss|.less 文件，最后都会转换为.wxml和.wxss</p>
+
+<p>5.编写完任何文件（包括.json）只需要去微信开发者工具中点击重启即可预览</p>
+
+<p>6.NODE_ENV 环境切换 (dev|production)</p>
+
+<p>7.支持eslint (在gulpfile文件打开36行注释即可,下个版本会集成到cli配置选项中)</p>
+
+<p>劣势</p>
+
+<p>1.由于微信封闭的环境内，所以没有sourcemap，但这不太影响调试（即使是经过编译后的代码，本人测试了出bug的代码，还是可以从控制台跳到源码的地方）</p>
+
+<p>2.由于微信封闭的环境内，无法实现reload或者hot reload</p>
+
+<p>PS: 当然如果你不想写ES6也是完全可以的 在后面统一介绍命令</p>
+
+<h1>Q&amp; A</h1>
+
+<h2>微信小程序开发需要具体哪些技术知识？</h2>
+
+<ul>
+<li>会js、css</li>
+<li>理解移动端h5相关开发概念</li>
+<li>使用微信提供的wxml和wxss</li>
+<li>熟悉微信提供api</li>
+<li>熟悉http协议</li>
+</ul>
+
+<h2>适合0基础的前端工程师学习？</h2>
+
+<p>和h5类似，入门简单，精通很难</p>
+
+<h2>微信小程序跟HTML5、Web APP的关系</h2>
+
+<ul>
+<li>小程序不是HTML5，也不是Web APP</li>
+<li>都是展示层的</li>
+<li>基础知识都是一样的，移动端，http协议等</li>
+<li>api和开发方式有一定差异，都属于受限开发</li>
+<li>小程序的抽象程度更高，与是h5实现还是native实现无关</li>
+<li>和Web App关系不大，但会Web App学这个还是比较容易的</li>
+</ul>
+
+<h2>怎么学习微信小程序，如果没有邀请码，可以怎么学？</h2>
+
+<p>上面讲过了</p>
+
+<h2>如何看待h5？</h2>
+
+<p>我曾讲过，未来是h5的，原因有2</p>
+
+<p>硬件越来越牛逼，廉价，内存不会成为限制条件
+网络带宽越来越牛逼
+这估计也是目前h5受限的2个主要点吧。</p>
+
+<p>微信公众号时代，引入h5，以及手游，算是让h5火了一把，但整体来说开发体验并不好，一般大家只用h5写一些交互少、偏于展示层的东西。而完整的hybrid应用，还是要有一定比例的借助native来实现一些原生功能的。</p>
+
+<p>无论是h5虚拟化也好，还是各种折腾，比如cordova，react natvie也好，我一直认为它们是过渡状态，从native到h5的过程中，限于条件妥协的产物。当然，在目前来看，想要取得好的效果，难免要使用它。</p>
+
+<p>最近几年，被h5冲击的native开发越来越惨淡（相比2010年到2014年），甚至有人说app已死，开发公众号h5就可以了。这是客观的某种事实，确实微信有用户基数，是比较好的入口，另外你需要的功能基本上都可以实现。而且成本上，相对要低一些。</p>
+
+<p>可，它真的很完美么？</p>
+
+<p>不见得吧，1）跨平台是永远的痛，一般连iOS6+，Android 4+都很难兼顾，有时候讨厌的让人不禁想起f**k ie6.。。 2）各个浏览器，版本实现不一致，以存储为例，localstorage，sqlite，indexedb等，每个版本可能都不一定支持，又何谈通用性呢？混乱不是不能解决，成本问题，3）开发看着容易，但你很难找到好的开发人员。写的话大家差不多都可以，但谈到优化，大部分人都怂了，这其实也是目前h5效果不好的原因。</p>
+
+<p>在平衡时间和实现之间，有时我们忍了。。。这大概就是未来吧</p>
+
+<p>说了一堆h5的缺点，也说说它的优点吧，目前无数开拓者，前仆后继，都投入到这个坑里，无数的解决方案，框架，优化，每天都在产生。我们现在觉得前端发展无比迅速，其实很大比例是h5推动的，它已经是前端领域必不可少的组成部分。无论是vue 2， ng2，ionic2等都是比较优秀的，甚至基于weui都衍生出大把的框架。这是时代带给我们的，是挑战，也是机遇</p>
+
+<p>再说说人的问题</p>
+
+<p>传统的前端不会h5都不好意思说自己是前端，目前招聘最火就是前端了，面试是不可能不问h5相关问题的
+iOS和Android开发，如果不会h5，未来的出路会越来越窄，当下北京的iOS培训出来的都很难找工作（甚至有不要薪水蹭经验的）。对于那些在职的人来说，每天领导都在“算计”他们，要不hybrid？
+h5就像前端开发里躲不开Node.js一样，无论你是做什么的，你都绕不开h5</p>
+
+<p>再回头说微信应用号这事儿，微信会变成OS（操作系统），以后大家只要用我就好了，把其他应用变成微信下面的子应用，这下世界就清净了。以前一直觉得chrome os的理念很先进，不想竟然微信实现了。。。</p>
+
+<p>微信下一步可能要和手机厂商合作了，手机里只有微信OS，打开就是微信界面，然后想安装应用，请打开微信OS里的h5 app store。。。</p>
+
+<p>是不是挺吓人的一件事儿？估计其他大厂又要躲在厕所哭泣：不要让我的app下架。。。，微信说：你司核心价值观有问题，改了之后再说吧</p>
+
+<h2>如何快速学习？</h2>
+
+<p>小程序只是增加了一种选择，以前是h5，pc，app，现在是小程序，h5，pc，app，它们无疑都是展示层的实现，所以对后台是没有影响的。它们的共性是会js能让你开发的更好，而今Node.js凭借其性能和强大npm生态，以及在大前端的火爆，使得Node.js无处不在。</p>
+
+<blockquote>
+<p>Node全栈是一个比较好的方向，如果不想全栈，你至少要考虑前端</p>
+</blockquote>
+
+<p>现代web开发里的大前端</p>
+
+<p><img src="images/node/0.png" alt="0"></p>
+
+<p><img src="images/node/1.png" alt="1"></p>
+
+<p><img src="images/node/2.png" alt="2"></p>
+
+<p><img src="images/node/3.png" alt="3"></p>
+
+<p>更多的</p>
+
+<p>高可用架构专用《全栈工程师之路-Node.js》 http://i5ting.github.io/nodejs-fullstack/</p>
+
+<h2>关于小程序未来</h2>
+
+<ul>
+<li>开发组件定义</li>
+<li>html转wxml，目前已经有人做了</li>
+<li>扫一扫</li>
+<li>schema url open</li>
+</ul>
+
+<h1>推荐一些学习资料</h1>
+
+<p>参见 </p>
+
+<ul>
+<li>https://github.com/justjavac/awesome-wechat-weapp</li>
+<li>http://wxopen.notedown.cn/</li>
+</ul>
+
+<h1>关于现状</h1>
+
+<p><img src="images/stuq.png" alt=""></p>
+
+<ul>
+<li>技术发展太快，是指数型发展</li>
+<li>人的学习速度是平滑的上升的曲线</li>
+<li>持续学习，利用好时间，每日精进</li>
+</ul>
+
+<h1>作业</h1>
+
+<p>这个分类tab实现的太low了，很明显没有花费时间，如何通过class属性来实现一个更加好看的，带有选中状态的分类tab么？</p>
+
+<p>大家可以自己试试</p>
+
+			          	</article>
+			        </div>
+					</div>
+	      </body>
+	    </html>
+			<script type="text/javascript" src="toc/js/jquery-1.4.4.min.js"></script>
+			<script type="text/javascript" src="toc/js/jquery.ztree.all-3.5.min.js"></script>
+			<script type="text/javascript" src="toc/js/ztree_toc.js"></script>
+      <script type="text/javascript" src="toc/toc_conf.js"></script>
+      
+			<SCRIPT type="text/javascript" >
+			<!--
+			$(document).ready(function(){
+          var css_conf = eval(markdown_panel_style);
+          $('#readme').css(css_conf)
+          
+          var conf = eval(jquery_ztree_toc_opts);
+  				$('#tree').ztree_toc(conf);
+
+				
+			});
+			//-->
+			</SCRIPT>
+	  
