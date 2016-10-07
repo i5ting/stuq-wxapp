@@ -946,6 +946,27 @@ export default <span class="err">{</span>
 
 <p>上面讲过了</p>
 
+<h2>没有webview，不支持html，帖子内容的格式显示和图片显示有啥好的处理办法</h2>
+
+<p>自己改写marked</p>
+<div class="highlight"><pre>var marked = require(&#39;.&#39;);
+console.log(marked(&#39;# I am using __markdown__.&#39;));
+// Outputs: <span class="nt">&lt;view</span> <span class="na">class=</span><span class="s">&quot;h1&quot;</span> <span class="na">id=</span><span class="s">&quot;i-am-using-__markdown__-&quot;</span><span class="nt">&gt;</span>I am using <span class="nt">&lt;view</span> <span class="na">class=</span><span class="s">&quot;strong&quot;</span><span class="nt">&gt;</span>markdown<span class="nt">&lt;/view&gt;</span>.<span class="nt">&lt;/view&gt;</span>
+</pre></div>
+<p>然后自己</p>
+<div class="highlight"><pre><span class="o">.</span><span class="vg">h1</span><span class="p">,</span><span class="o">.</span><span class="vg">h2</span><span class="p">,</span><span class="o">.</span><span class="vg">h3</span><span class="p">,</span><span class="o">.</span><span class="vg">h4</span><span class="p">,</span><span class="o">.</span><span class="vg">h5</span><span class="p">,</span><span class="o">.</span><span class="vg">h6</span><span class="p">{</span>
+<span class="w">  </span><span class="vg">font</span><span class="o">-</span><span class="nl">weight:</span><span class="vg">normal</span><span class="p">;</span>
+<span class="w">  </span><span class="nl">color:</span><span class="err">#</span><span class="il">111</span><span class="p">;</span>
+<span class="w">  </span><span class="vg">line</span><span class="o">-</span><span class="nl">height:</span><span class="il">1</span><span class="vg">em</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="o">.</span><span class="vg">h4</span><span class="p">,</span><span class="o">.</span><span class="vg">h5</span><span class="p">,</span><span class="o">.</span><span class="vg">h6</span><span class="p">{</span><span class="w"> </span><span class="vg">font</span><span class="o">-</span><span class="nl">weight:</span><span class="w"> </span><span class="vg">bold</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="o">.</span><span class="vg">h1</span><span class="p">{</span><span class="w"> </span><span class="vg">font</span><span class="o">-</span><span class="nl">size:</span><span class="mf">2.5</span><span class="vg">em</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="o">.</span><span class="vg">h2</span><span class="p">{</span><span class="w"> </span><span class="vg">font</span><span class="o">-</span><span class="nl">size:</span><span class="il">2</span><span class="vg">em</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="o">.</span><span class="vg">h3</span><span class="p">{</span><span class="w"> </span><span class="vg">font</span><span class="o">-</span><span class="nl">size:</span><span class="mf">1.5</span><span class="vg">em</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="o">.</span><span class="vg">h4</span><span class="p">{</span><span class="w"> </span><span class="vg">font</span><span class="o">-</span><span class="nl">size:</span><span class="mf">1.2</span><span class="vg">em</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="o">.</span><span class="vg">h5</span><span class="p">{</span><span class="w"> </span><span class="vg">font</span><span class="o">-</span><span class="nl">size:</span><span class="il">1</span><span class="vg">em</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="o">.</span><span class="vg">h6</span><span class="p">{</span><span class="w"> </span><span class="vg">font</span><span class="o">-</span><span class="nl">size:</span><span class="mf">0.9</span><span class="vg">em</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</pre></div>
 <h2>如何看待h5？</h2>
 
 <p>我曾讲过，未来是h5的，原因有2</p>
