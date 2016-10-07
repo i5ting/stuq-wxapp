@@ -8,6 +8,8 @@
 
 如果想邀请分享，请邮寄给我i5ting@126.com,如果时间ok，我会尽量分享
 
+- [今晚直播 | 前端老司机带你实现小程序 CNode 社区](https://www.oschina.net/news/77638/weixin-app-to-cnode)
+
 ## 讲师介绍
 
 英文版本
