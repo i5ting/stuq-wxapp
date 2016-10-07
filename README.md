@@ -820,6 +820,8 @@ k-v的，还是比较有限的
 - pub/sub
 - im
 
+## Canvas
+
 # 高级玩法
 
 https://github.com/MeCKodo/wxapp-cli
