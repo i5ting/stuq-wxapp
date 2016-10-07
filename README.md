@@ -876,6 +876,33 @@ PS: 当然如果你不想写ES6也是完全可以的 在后面统一介绍命令
 
 上面讲过了
 
+## 没有webview，不支持html，帖子内容的格式显示和图片显示有啥好的处理办法
+
+自己改写marked
+
+```
+var marked = require('.');
+console.log(marked('# I am using __markdown__.'));
+// Outputs: <view class="h1" id="i-am-using-__markdown__-">I am using <view class="strong">markdown</view>.</view>
+```
+
+然后自己
+
+```
+.h1,.h2,.h3,.h4,.h5,.h6{
+  font-weight:normal;
+  color:#111;
+  line-height:1em;
+}
+.h4,.h5,.h6{ font-weight: bold; }
+.h1{ font-size:2.5em; }
+.h2{ font-size:2em; }
+.h3{ font-size:1.5em; }
+.h4{ font-size:1.2em; }
+.h5{ font-size:1em; }
+.h6{ font-size:0.9em; }
+```
+
 ## 如何看待h5？
 
 我曾讲过，未来是h5的，原因有2
