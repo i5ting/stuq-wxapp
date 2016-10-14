@@ -7,7 +7,7 @@
     <view class="top-bar-item" id="ask" catchtap="onTapTag">问答</view>
     <view class="top-bar-item" id="job" catchtap="onTapTag">招聘</view>
   </view>
-  <scroll-view class="posts-list" style="height:100%" scroll-y="true" bindscrolltolower="lower">
+  <scroll-view class="posts-list" style="height:1200rpx" scroll-y="true" bindscrolltolower="lower">
     <block wx:for="{{postsList}}">
       <view class="posts-item" index="{{index}}" id="{{item.id}}" catchtap="redictDetail">
         <view class="author">
